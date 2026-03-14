@@ -1,12 +1,8 @@
 ﻿import { chromium } from 'playwright';
-import { createClient } from '@vercel/kv';
 
-const kv = createClient({
-  url: process.env.KV_REST_API_URL,
-  token: process.env.KV_REST_API_TOKEN,
-});
-
+// Função para fazer login no Chaves na Mão
 export default async function handler(req, res) {
+  // Configurar CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -25,44 +21,51 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Email e senha obrigatórios' });
   }
 
+  let browser = null;
+  
   try {
-    const browser = await chromium.launch({
+    // Iniciar browser
+    browser = await chromium.launch({
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
 
     const page = await browser.newPage();
     
+    // Acessar página de login
     await page.goto('https://www.chavesnamao.com.br/entrar/', { 
       waitUntil: 'networkidle',
       timeout: 30000 
     });
 
+    // Clicar em "Entrar com email"
     await page.click('span.spacing-1x > button');
     await page.waitForTimeout(2000);
 
+    // Preencher credenciais
     await page.fill('#userLogin-input', email);
     await page.fill('input[type="password"]', senha);
     
+    // Clicar no botão de entrar
     await page.click('button[type="submit"]');
     await page.waitForTimeout(5000);
 
     const currentUrl = page.url();
     
+    // Verificar se login foi bem-sucedido
     if (currentUrl.includes('minhaconta') || !currentUrl.includes('entrar')) {
+      // Login bem-sucedido
       const sessionToken = Buffer.from(`${email}:${Date.now()}`).toString('base64');
       
-      await kv.set(`session:${sessionToken}`, {
-        email,
-        createdAt: Date.now(),
-        cookies: await page.context().cookies()
-      }, { ex: 3600 });
-
+      // Salvar cookies para uso posterior
+      const cookies = await page.context().cookies();
+      
       await browser.close();
 
       return res.status(200).json({
         success: true,
         sessionToken,
+        cookies,
         message: 'Login realizado com sucesso'
       });
     } else {
@@ -75,6 +78,7 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Erro no login:', error);
+    if (browser) await browser.close();
     return res.status(500).json({ 
       success: false, 
       error: error.message 

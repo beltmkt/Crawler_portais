@@ -1,10 +1,7 @@
 ﻿import { chromium } from 'playwright';
-import { createClient } from '@vercel/kv';
 
-const kv = createClient({
-  url: process.env.KV_REST_API_URL,
-  token: process.env.KV_REST_API_TOKEN,
-});
+// Armazenamento temporário em memória (em produção, use Redis/KV)
+const jobs = new Map();
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -21,34 +18,30 @@ export default async function handler(req, res) {
 
   const { sessionToken, anuncios } = req.body;
 
-  if (!sessionToken) {
-    return res.status(401).json({ error: 'Sessão inválida' });
+  if (!sessionToken || !anuncios) {
+    return res.status(400).json({ error: 'sessionToken e anuncios são obrigatórios' });
   }
 
   try {
-    const session = await kv.get(`session:${sessionToken}`);
+    const jobId = `job_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     
-    if (!session) {
-      return res.status(401).json({ error: 'Sessão expirada' });
-    }
-
-    const jobId = `job:${Date.now()}`;
-
-    await kv.set(jobId, {
+    // Inicializar job
+    jobs.set(jobId, {
       status: 'pending',
       total: anuncios.length,
       processed: 0,
       photos: 0,
       results: [],
-      logs: []
+      logs: [],
+      startTime: Date.now()
     });
 
-    // Iniciar processamento em background
-    processAnuncios(jobId, anuncios, session).catch(console.error);
+    // Iniciar processamento em background (não esperar)
+    processAnuncios(jobId, anuncios, sessionToken).catch(console.error);
 
     return res.status(200).json({
       success: true,
-      jobId: jobId.replace('job:', ''),
+      jobId,
       message: 'Extração iniciada'
     });
 
@@ -58,64 +51,61 @@ export default async function handler(req, res) {
   }
 }
 
-async function processAnuncios(jobId, anuncios, session) {
-  const kv = createClient({
-    url: process.env.KV_REST_API_URL,
-    token: process.env.KV_REST_API_TOKEN,
-  });
-
-  let browser;
+async function processAnuncios(jobId, anuncios, sessionToken) {
+  let browser = null;
   
   try {
-    await updateJobStatus(jobId, { status: 'running' });
+    updateJob(jobId, { status: 'running' });
+    addLog(jobId, '🚀 Iniciando processamento...');
 
     browser = await chromium.launch({
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
 
-    const context = await browser.newContext();
-    
-    if (session.cookies) {
-      await context.addCookies(session.cookies);
-    }
-
-    const page = await context.newPage();
-
+    const page = await browser.newPage();
     const results = [];
     let totalPhotos = 0;
 
     for (let i = 0; i < anuncios.length; i++) {
       const anuncio = anuncios[i];
       
-      await addLog(jobId, `⏳ Processando anúncio ${i + 1}/${anuncios.length}: ID ${anuncio.id}`);
+      addLog(jobId, `⏳ Processando anúncio ${i + 1}/${anuncios.length}: ${anuncio.id}`);
 
       try {
         await page.goto(anuncio.url, { waitUntil: 'networkidle', timeout: 30000 });
         await page.waitForTimeout(3000);
 
+        // Extrair dados da página
         const dados = await page.evaluate((id) => {
           const texto = document.body.innerText;
           
+          // Título
           const titulo = document.querySelector('h1')?.innerText || '';
           
+          // Preço
           const precoMatch = texto.match(/Venda[:\s]*R?\$?\s*([\d.,]+)/i);
           const preco = precoMatch ? precoMatch[1].replace(/\./g, '').replace(',', '.') : '';
           
+          // Código/Referência
           const refMatch = texto.match(/Ref[.:]\s*([A-Z0-9-]+)/i);
           const codigo = refMatch ? refMatch[1] : id;
           
+          // Características
           const quartos = texto.match(/(\d+)\s*quartos?/i)?.[1] || '0';
           const suites = texto.match(/(\d+)\s*(?:suite|suíte)/i)?.[1] || '0';
           const banheiros = texto.match(/(\d+)\s*banheiros?/i)?.[1] || '0';
           const vagas = texto.match(/(\d+)\s*vagas?/i)?.[1] || '0';
           const area = texto.match(/(\d+[.,]?\d*)\s*m[²2]/i)?.[1]?.replace(',', '.') || '0';
           
+          // Condomínio
           const condominio = texto.match(/Condom[íi]nio[:\s]*R?\$?\s*([\d.,]+)/i)?.[1]?.replace(/\./g, '').replace(',', '.') || '';
           
+          // Endereço
           const enderecoElem = document.querySelector('.endereco-texto');
           const endereco = enderecoElem ? enderecoElem.innerText : '';
           
+          // Primeira foto
           const primeiraFoto = document.querySelector('img[src*="imoveis/"]')?.src || '';
           
           return {
@@ -133,6 +123,7 @@ async function processAnuncios(jobId, anuncios, session) {
           };
         }, anuncio.id);
 
+        // Gerar URLs das fotos (00 até 99)
         const fotos = [];
         if (dados.primeiraFoto) {
           const baseUrl = dados.primeiraFoto
@@ -163,16 +154,16 @@ async function processAnuncios(jobId, anuncios, session) {
 
         totalPhotos += fotos.length;
 
-        await updateJobStatus(jobId, {
+        updateJob(jobId, {
           processed: i + 1,
           photos: totalPhotos,
           results
         });
 
-        await addLog(jobId, `✅ Anúncio ${i + 1} processado - ${fotos.length} fotos`, 'success');
+        addLog(jobId, `✅ Anúncio ${i + 1} processado - ${fotos.length} fotos`);
 
       } catch (error) {
-        await addLog(jobId, `❌ Erro no anúncio ${i + 1}: ${error.message}`, 'error');
+        addLog(jobId, `❌ Erro no anúncio ${i + 1}: ${error.message}`);
         
         results.push({
           id: anuncio.id,
@@ -181,22 +172,24 @@ async function processAnuncios(jobId, anuncios, session) {
         });
       }
 
+      // Pequena pausa entre anúncios
       await new Promise(r => setTimeout(r, 2000));
     }
 
+    // Gerar XML
     const xml = gerarXML(results);
 
-    await updateJobStatus(jobId, {
+    updateJob(jobId, {
       status: 'completed',
       xml,
       results
     });
 
-    await addLog(jobId, '✅ Extração concluída com sucesso!', 'success');
+    addLog(jobId, '✅ Extração concluída com sucesso!');
 
   } catch (error) {
     console.error('Erro no processamento:', error);
-    await updateJobStatus(jobId, {
+    updateJob(jobId, {
       status: 'error',
       error: error.message
     });
@@ -205,27 +198,20 @@ async function processAnuncios(jobId, anuncios, session) {
   }
 }
 
-async function updateJobStatus(jobId, updates) {
-  const kv = createClient({
-    url: process.env.KV_REST_API_URL,
-    token: process.env.KV_REST_API_TOKEN,
-  });
-
-  const current = await kv.get(jobId) || {};
-  await kv.set(jobId, { ...current, ...updates });
+function updateJob(jobId, updates) {
+  const job = jobs.get(jobId) || {};
+  jobs.set(jobId, { ...job, ...updates });
 }
 
-async function addLog(jobId, message, type = 'info') {
-  const kv = createClient({
-    url: process.env.KV_REST_API_URL,
-    token: process.env.KV_REST_API_TOKEN,
-  });
-
-  const job = await kv.get(jobId);
+function addLog(jobId, message) {
+  const job = jobs.get(jobId);
   if (job) {
     job.logs = job.logs || [];
-    job.logs.push({ message, type, timestamp: Date.now() });
-    await kv.set(jobId, job);
+    job.logs.push({ 
+      message, 
+      timestamp: new Date().toISOString() 
+    });
+    jobs.set(jobId, job);
   }
 }
 
@@ -310,3 +296,6 @@ function escapeXML(text) {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&apos;');
 }
+
+// Exportar jobs para outros endpoints
+export { jobs };

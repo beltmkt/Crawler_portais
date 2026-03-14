@@ -1,9 +1,4 @@
-﻿import { createClient } from '@vercel/kv';
-
-const kv = createClient({
-  url: process.env.KV_REST_API_URL,
-  token: process.env.KV_REST_API_TOKEN,
-});
+﻿import { jobs } from './extract.js';
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -14,6 +9,10 @@ export default async function handler(req, res) {
     return res.status(200).end();
   }
 
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Método não permitido' });
+  }
+
   const { jobId } = req.query;
 
   if (!jobId) {
@@ -21,7 +20,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const job = await kv.get(`job:${jobId}`);
+    const job = jobs.get(jobId);
 
     if (!job || !job.xml) {
       return res.status(404).json({ error: 'XML não encontrado' });
