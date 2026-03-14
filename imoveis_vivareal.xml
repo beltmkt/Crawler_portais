@@ -1,0 +1,881 @@
+<?xml version="1.0" ?>
+<ListingDataFeed xmlns="http://www.vivareal.com/schemas/1.0/VRSync" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Header>
+    <PublishDate>2026-03-14T04:06:01</PublishDate>
+    <Provider>PLANEJA NEGÓCIOS IMOBILIÁRIOS</Provider>
+    <Email>planejaimobiliaria@gmail.com</Email>
+  </Header>
+  <Listings>
+    <Listing>
+      <ListingID>SALA001</ListingID>
+      <ListDate>2026-03-14-04:06</ListDate>
+      <LastUpdateDate>2026-03-14-04:06</LastUpdateDate>
+      <TransactionType>For Sale</TransactionType>
+      <Title>Sala comercial à venda na Rua Doutor Pedrosa, 313, Batel, Curitiba</Title>
+      <Featured>false</Featured>
+      <PublicationType>STANDARD</PublicationType>
+      <Location displayAddress="Full">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="PR">Paraná</State>
+        <City>Curitiba</City>
+        <Zone/>
+        <Neighborhood>Batel</Neighborhood>
+        <Complement/>
+        <PostalCode/>
+        <Latitude/>
+        <Longitude/>
+      </Location>
+      <Details>
+        <Description>Sala comercial à venda na Rua Doutor Pedrosa, 313, Batel, Curitiba
+Referência: SALA001
+CARACTERÍSTICAS DO IMÓVEL:
+• - Terraço descoberto com Jardim
+• - Elevadores
+• Acabamento em alto padrão
+• Janelas em alumínio
+• - Sala de Reunião
+• Sala comercial a venda no Jardim Botânico
+• Elevador(es) de serviço
+• Portaria 24h
+• Hall de entrada decorado
+• Elevador(es)
+• Hall de entrada
+• - Estacionamento
+• Coworking
+• Câmeras de segurança
+• Infraestrutura de ar condicionado
+• - Portaria
+• - Refeitório
+• Banheiro PNE
+• Cozinha com refeitório
+• Isolamento acústico
+• Sistema de câmeras
+• Fechadura biométrica
+• - Recepção</Description>
+        <SalePrice currency="BRL">430000</SalePrice>
+        <PropertyType>Sala Comercial</PropertyType>
+        <LivingArea unit="square metres">22.0</LivingArea>
+        <Bedrooms>1</Bedrooms>
+        <Bathrooms>0</Bathrooms>
+        <Suites>0</Suites>
+        <ParkingSpaces>1</ParkingSpaces>
+        <MonthlyFee currency="BRL">900</MonthlyFee>
+        <Features> </Features>
+      </Details>
+      <Media>
+        <Item medium="image" primary="true">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-00.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-01.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-02.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-03.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-04.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-05.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-06.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-07.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-08.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-09.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-10.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-11.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-12.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-13.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-14.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-15.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-16.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-17.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-18.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-19.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40129776/pr-curitiba-centro-rua-doutor-pedrosa-sala-comercial-a-venda-69a88d0b-20.jpg</Item>
+      </Media>
+      <ContactInfo>
+        <Email>planejaimobiliaria@gmail.com</Email>
+        <Name>PLANEJA NEGÓCIOS IMOBILIÁRIOS</Name>
+        <Telephone>(41) 3092-1001</Telephone>
+      </ContactInfo>
+      <Status>
+        <PropertyStatus>Available</PropertyStatus>
+        <StatusDate>14/03/2026</StatusDate>
+      </Status>
+    </Listing>
+    <Listing>
+      <ListingID>AP009</ListingID>
+      <ListDate>2026-03-14-04:06</ListDate>
+      <LastUpdateDate>2026-03-14-04:06</LastUpdateDate>
+      <TransactionType>For Sale</TransactionType>
+      <Title>Lindo apartamento no capao raso, mobiliado , 3 dormitorios 1 vaga</Title>
+      <Featured>false</Featured>
+      <PublicationType>STANDARD</PublicationType>
+      <Location displayAddress="Full">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="PR">Paraná</State>
+        <City>Curitiba</City>
+        <Zone/>
+        <Neighborhood>Batel</Neighborhood>
+        <Complement/>
+        <PostalCode/>
+        <Latitude/>
+        <Longitude/>
+      </Location>
+      <Details>
+        <Description>Lindo apartamento no capao raso, mobiliado , 3 dormitorios 1 vaga
+Referência: AP009
+CARACTERÍSTICAS DO IMÓVEL:
+• O apartamento também dispõe de 1 vaga de garagem, trazendo mais segurança e praticidade.
+• Hall de entrada decorado
+• Salão de festas
+• Playground
+• • Cozinha funcional
+• Elevador(es)
+• Coworking
+• Academia
+• Quadra de esporte</Description>
+        <SalePrice currency="BRL">470000</SalePrice>
+        <PropertyType>Sala Comercial</PropertyType>
+        <LivingArea unit="square metres">61.0</LivingArea>
+        <Bedrooms>3</Bedrooms>
+        <Bathrooms>1</Bathrooms>
+        <Suites>1</Suites>
+        <ParkingSpaces>1</ParkingSpaces>
+        <MonthlyFee currency="BRL">510</MonthlyFee>
+        <Features> </Features>
+      </Details>
+      <Media>
+        <Item medium="image" primary="true">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40126118/pr-curitiba-capao-raso-rua-marechal-octavio-saldanha-mazza-apartamento-a-venda-3-quartos-69a871f2-00.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40126118/pr-curitiba-capao-raso-rua-marechal-octavio-saldanha-mazza-apartamento-a-venda-3-quartos-69a871f2-01.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40126118/pr-curitiba-capao-raso-rua-marechal-octavio-saldanha-mazza-apartamento-a-venda-3-quartos-69a871f2-02.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40126118/pr-curitiba-capao-raso-rua-marechal-octavio-saldanha-mazza-apartamento-a-venda-3-quartos-69a871f2-03.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40126118/pr-curitiba-capao-raso-rua-marechal-octavio-saldanha-mazza-apartamento-a-venda-3-quartos-69a871f2-04.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40126118/pr-curitiba-capao-raso-rua-marechal-octavio-saldanha-mazza-apartamento-a-venda-3-quartos-69a871f2-05.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40126118/pr-curitiba-capao-raso-rua-marechal-octavio-saldanha-mazza-apartamento-a-venda-3-quartos-69a871f2-06.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40126118/pr-curitiba-capao-raso-rua-marechal-octavio-saldanha-mazza-apartamento-a-venda-3-quartos-69a871f2-07.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40126118/pr-curitiba-capao-raso-rua-marechal-octavio-saldanha-mazza-apartamento-a-venda-3-quartos-69a871f2-08.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40126118/pr-curitiba-capao-raso-rua-marechal-octavio-saldanha-mazza-apartamento-a-venda-3-quartos-69a871f2-09.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40126118/pr-curitiba-capao-raso-rua-marechal-octavio-saldanha-mazza-apartamento-a-venda-3-quartos-69a871f2-10.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/40126118/pr-curitiba-capao-raso-rua-marechal-octavio-saldanha-mazza-apartamento-a-venda-3-quartos-69a871f2-11.jpg</Item>
+      </Media>
+      <ContactInfo>
+        <Email>planejaimobiliaria@gmail.com</Email>
+        <Name>PLANEJA NEGÓCIOS IMOBILIÁRIOS</Name>
+        <Telephone>(41) 3092-1001</Telephone>
+      </ContactInfo>
+      <Status>
+        <PropertyStatus>Available</PropertyStatus>
+        <StatusDate>14/03/2026</StatusDate>
+      </Status>
+    </Listing>
+    <Listing>
+      <ListingID>AP0012</ListingID>
+      <ListDate>2026-03-14-04:06</ListDate>
+      <LastUpdateDate>2026-03-14-04:06</LastUpdateDate>
+      <TransactionType>For Sale</TransactionType>
+      <Title>Apartamento com 3 quartos à venda na MOYSES MARCONDE, 53, Juvevê, Curitiba</Title>
+      <Featured>false</Featured>
+      <PublicationType>STANDARD</PublicationType>
+      <Location displayAddress="Full">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="PR">Paraná</State>
+        <City>Curitiba</City>
+        <Zone/>
+        <Neighborhood>Juvevê</Neighborhood>
+        <Complement/>
+        <PostalCode/>
+        <Latitude/>
+        <Longitude/>
+      </Location>
+      <Details>
+        <Description>Apartamento com 3 quartos à venda na MOYSES MARCONDE, 53, Juvevê, Curitiba
+Referência: AP0012
+CARACTERÍSTICAS DO IMÓVEL:
+• Academias
+• Apartamentos a venda no Jardim Social
+• Câmeras de segurança
+• Churrasqueira
+• Hall de entrada decorado
+• • Sacada com churrasqueira e pia de apoio
+• Ar Condicionado
+• No Juvevê tem academias ideais para manter a saúde em dia.
+• Salão de festas
+• Acabamento em alto padrão
+• Playground
+• Portaria
+• Sistema de câmeras
+• Elevador(es)
+• Sacada com churrasqueira
+• Academia
+• Churrasqueira(s) coletiva(s)
+• • Cozinha espaçosa</Description>
+        <SalePrice currency="BRL">1670000</SalePrice>
+        <PropertyType>Sala Comercial</PropertyType>
+        <LivingArea unit="square metres">105.0</LivingArea>
+        <Bedrooms>3</Bedrooms>
+        <Bathrooms>1</Bathrooms>
+        <Suites>1</Suites>
+        <ParkingSpaces>2</ParkingSpaces>
+        <Features> </Features>
+      </Details>
+      <Media>
+        <Item medium="image" primary="true">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-00.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-01.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-02.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-03.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-04.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-05.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-06.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-07.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-08.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-09.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-10.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-11.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-12.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-13.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-14.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-15.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-16.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-17.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-18.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-19.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-20.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-21.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-22.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-23.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-24.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-25.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39632000/pr-curitiba-juveve-moyses-marconde-apartamento-a-venda-3-quartos-6991e765-26.jpg</Item>
+      </Media>
+      <ContactInfo>
+        <Email>planejaimobiliaria@gmail.com</Email>
+        <Name>PLANEJA NEGÓCIOS IMOBILIÁRIOS</Name>
+        <Telephone>(41) 3092-1001</Telephone>
+      </ContactInfo>
+      <Status>
+        <PropertyStatus>Available</PropertyStatus>
+        <StatusDate>14/03/2026</StatusDate>
+      </Status>
+    </Listing>
+    <Listing>
+      <ListingID>AP009</ListingID>
+      <ListDate>2026-03-14-04:06</ListDate>
+      <LastUpdateDate>2026-03-14-04:06</LastUpdateDate>
+      <TransactionType>For Sale</TransactionType>
+      <Title>Lindo Apartamento Semi Mobiliado no Uberaba, com dois Dormitórios, sendo uma suíte, 1 vaga</Title>
+      <Featured>false</Featured>
+      <PublicationType>STANDARD</PublicationType>
+      <Location displayAddress="Full">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="PR">Paraná</State>
+        <City>Curitiba</City>
+        <Zone/>
+        <Neighborhood>Uberaba</Neighborhood>
+        <Complement/>
+        <PostalCode/>
+        <Latitude/>
+        <Longitude/>
+      </Location>
+      <Details>
+        <Description>Lindo Apartamento Semi Mobiliado no Uberaba, com dois Dormitórios, sendo uma suíte, 1 vaga
+Referência: AP009
+CARACTERÍSTICAS DO IMÓVEL:
+• Apartamentos a venda no Jardim Botânico
+• Churrasqueira
+• Jardim
+• Hall de entrada decorado
+• Apartamentos a venda na Cidade Jardim
+• Salão de festas
+• Playground
+• Elevador(es)
+• Sacada com churrasqueira
+• Churrasqueira(s) coletiva(s)
+• Academia
+• Cozinha planejada
+• Quadra de esporte
+• Apartamentos a venda no Jardim das Américas</Description>
+        <SalePrice currency="BRL">519000</SalePrice>
+        <PropertyType>Sala Comercial</PropertyType>
+        <LivingArea unit="square metres">59.0</LivingArea>
+        <Bedrooms>2</Bedrooms>
+        <Bathrooms>1</Bathrooms>
+        <Suites>0</Suites>
+        <ParkingSpaces>1</ParkingSpaces>
+        <Features> </Features>
+      </Details>
+      <Media>
+        <Item medium="image" primary="true">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-00.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-01.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-02.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-03.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-04.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-05.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-06.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-07.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-08.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-09.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-10.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-11.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-12.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-13.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-14.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-15.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-16.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-17.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-18.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-19.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-20.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-21.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-22.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-23.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-24.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-25.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-26.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-27.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-28.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39199400/pr-curitiba-uberaba-rua-rodolfo-bernardelli-apartamento-a-venda-2-quartos-69823332-29.jpg</Item>
+      </Media>
+      <ContactInfo>
+        <Email>planejaimobiliaria@gmail.com</Email>
+        <Name>PLANEJA NEGÓCIOS IMOBILIÁRIOS</Name>
+        <Telephone>(41) 3092-1001</Telephone>
+      </ContactInfo>
+      <Status>
+        <PropertyStatus>Available</PropertyStatus>
+        <StatusDate>14/03/2026</StatusDate>
+      </Status>
+    </Listing>
+    <Listing>
+      <ListingID>TERRENO-001</ListingID>
+      <ListDate>2026-03-14-04:06</ListDate>
+      <LastUpdateDate>2026-03-14-04:06</LastUpdateDate>
+      <TransactionType>For Sale</TransactionType>
+      <Title>Terreno de 7.494 m2 na saldanha marinho - batel - ideal para construçoes residenciais, escolas, igrejas,</Title>
+      <Featured>false</Featured>
+      <PublicationType>STANDARD</PublicationType>
+      <Location displayAddress="Full">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="PR">Paraná</State>
+        <City>Curitiba</City>
+        <Zone/>
+        <Neighborhood>Batel</Neighborhood>
+        <Complement/>
+        <PostalCode/>
+        <Latitude/>
+        <Longitude/>
+      </Location>
+      <Details>
+        <Description>Terreno de 7.494 m2 na saldanha marinho - batel - ideal para construçoes residenciais, escolas, igrejas,
+Referência: TERRENO-001
+CARACTERÍSTICAS DO IMÓVEL:
+• Terrenos a venda no Jardim Botânico</Description>
+        <SalePrice currency="BRL">33000000</SalePrice>
+        <PropertyType>Sala Comercial</PropertyType>
+        <LivingArea unit="square metres">7.494</LivingArea>
+        <Bedrooms>0</Bedrooms>
+        <Bathrooms>0</Bathrooms>
+        <Suites>0</Suites>
+        <ParkingSpaces>0</ParkingSpaces>
+        <Features> </Features>
+      </Details>
+      <Media>
+        <Item medium="image" primary="true">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-00.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-01.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-02.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-03.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-04.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-05.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-06.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-07.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-08.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-09.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-10.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-11.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-12.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-13.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-14.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-15.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-16.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-17.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-18.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-19.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-20.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-21.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-22.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-23.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-24.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-25.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-26.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-27.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-28.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/39021771/pr-curitiba-batel-rua-saldanha-marinho-terreno-a-venda-697b626d-29.jpg</Item>
+      </Media>
+      <ContactInfo>
+        <Email>planejaimobiliaria@gmail.com</Email>
+        <Name>PLANEJA NEGÓCIOS IMOBILIÁRIOS</Name>
+        <Telephone>(41) 3092-1001</Telephone>
+      </ContactInfo>
+      <Status>
+        <PropertyStatus>Available</PropertyStatus>
+        <StatusDate>14/03/2026</StatusDate>
+      </Status>
+    </Listing>
+    <Listing>
+      <ListingID>AP008</ListingID>
+      <ListDate>2026-03-14-04:06</ListDate>
+      <LastUpdateDate>2026-03-14-04:06</LastUpdateDate>
+      <TransactionType>For Sale</TransactionType>
+      <Title>Lindíssimo Apartamento no Ecoville, 3 Suites, 4 vagas - Elevador Privativo, Mobiliado e Decorado</Title>
+      <Featured>false</Featured>
+      <PublicationType>STANDARD</PublicationType>
+      <Location displayAddress="Full">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="PR">Paraná</State>
+        <City>Curitiba</City>
+        <Zone/>
+        <Neighborhood>Batel</Neighborhood>
+        <Complement/>
+        <PostalCode/>
+        <Latitude/>
+        <Longitude/>
+      </Location>
+      <Details>
+        <Description>Lindíssimo Apartamento no Ecoville, 3 Suites, 4 vagas - Elevador Privativo, Mobiliado e Decorado
+Referência: AP008
+CARACTERÍSTICAS DO IMÓVEL:
+• Acabamento em alto padrão
+• Sacada com Churrasqueira a Carvão
+• Portaria 24h
+• Hall de entrada decorado
+• Lindíssimo Apartamento no Ecoville, 3 Suites, 4 vagas - Elevador Privativo, Mobiliado e Decorado
+• Salão de festas
+• Elevador(es)
+• Sacada com churrasqueira
+• Hall de entrada
+• Academia
+• Coworking
+• Câmeras de segurança
+• Jardim
+• Elevador Privativo
+• Blackout nas janelas
+• Playground
+• Elevador privativo
+• Piscina aquecida
+• Churrasqueira
+• Ar Condicionado
+• Sistema de câmeras
+• Fechadura biométrica
+• Cozinha planejada</Description>
+        <SalePrice currency="BRL">4900000</SalePrice>
+        <PropertyType>Sala Comercial</PropertyType>
+        <LivingArea unit="square metres">255.0</LivingArea>
+        <Bedrooms>3</Bedrooms>
+        <Bathrooms>3</Bathrooms>
+        <Suites>0</Suites>
+        <ParkingSpaces>4</ParkingSpaces>
+        <Features> </Features>
+      </Details>
+      <Media>
+        <Item medium="image" primary="true">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857192/pr-curitiba-campo-comprido-rua-jose-izidoro-biazetto-apartamento-a-venda-3-quartos-6976518c-00.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857192/pr-curitiba-campo-comprido-rua-jose-izidoro-biazetto-apartamento-a-venda-3-quartos-6976518c-01.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857192/pr-curitiba-campo-comprido-rua-jose-izidoro-biazetto-apartamento-a-venda-3-quartos-6976518c-02.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857192/pr-curitiba-campo-comprido-rua-jose-izidoro-biazetto-apartamento-a-venda-3-quartos-6976518c-03.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857192/pr-curitiba-campo-comprido-rua-jose-izidoro-biazetto-apartamento-a-venda-3-quartos-6976518c-04.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857192/pr-curitiba-campo-comprido-rua-jose-izidoro-biazetto-apartamento-a-venda-3-quartos-6976518c-05.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857192/pr-curitiba-campo-comprido-rua-jose-izidoro-biazetto-apartamento-a-venda-3-quartos-6976518c-06.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857192/pr-curitiba-campo-comprido-rua-jose-izidoro-biazetto-apartamento-a-venda-3-quartos-6976518c-07.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857192/pr-curitiba-campo-comprido-rua-jose-izidoro-biazetto-apartamento-a-venda-3-quartos-6976518c-08.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857192/pr-curitiba-campo-comprido-rua-jose-izidoro-biazetto-apartamento-a-venda-3-quartos-6976518c-09.jpg</Item>
+      </Media>
+      <ContactInfo>
+        <Email>planejaimobiliaria@gmail.com</Email>
+        <Name>PLANEJA NEGÓCIOS IMOBILIÁRIOS</Name>
+        <Telephone>(41) 3092-1001</Telephone>
+      </ContactInfo>
+      <Status>
+        <PropertyStatus>Available</PropertyStatus>
+        <StatusDate>14/03/2026</StatusDate>
+      </Status>
+    </Listing>
+    <Listing>
+      <ListingID>AP007</ListingID>
+      <ListDate>2026-03-14-04:06</ListDate>
+      <LastUpdateDate>2026-03-14-04:06</LastUpdateDate>
+      <TransactionType>For Sale</TransactionType>
+      <Title>Apartamento no Agua verde, 3 Dormitórios, Face Norte, Churrasqueira e Piscina</Title>
+      <Featured>false</Featured>
+      <PublicationType>STANDARD</PublicationType>
+      <Location displayAddress="Full">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="PR">Paraná</State>
+        <City>Curitiba</City>
+        <Zone/>
+        <Neighborhood>Batel</Neighborhood>
+        <Complement/>
+        <PostalCode/>
+        <Latitude/>
+        <Longitude/>
+      </Location>
+      <Details>
+        <Description>Apartamento no Agua verde, 3 Dormitórios, Face Norte, Churrasqueira e Piscina
+Referência: AP007
+CARACTERÍSTICAS DO IMÓVEL:
+• Apartamentos a venda no Jardim Botânico
+• Churrasqueira
+• Portaria 24h
+• Hall de entrada decorado
+• Cozinha
+• Salão de festas
+• Apartamento no Agua verde, 3 Dormitórios, Face Norte, Churrasqueira e Piscina
+• Elevador(es)
+• Academia
+• Piscina aquecida
+• Quadra de esporte
+• Apartamentos a venda no Jardim das Américas</Description>
+        <SalePrice currency="BRL">998000</SalePrice>
+        <PropertyType>Sala Comercial</PropertyType>
+        <LivingArea unit="square metres">136.0</LivingArea>
+        <Bedrooms>3</Bedrooms>
+        <Bathrooms>1</Bathrooms>
+        <Suites>1</Suites>
+        <ParkingSpaces>1</ParkingSpaces>
+        <Floor>2</Floor>
+        <MonthlyFee currency="BRL">1700</MonthlyFee>
+        <Features> </Features>
+      </Details>
+      <Media>
+        <Item medium="image" primary="true">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857184/pr-curitiba-agua-verde-avenida-republica-argentina-apartamento-a-venda-3-quartos-6976493f-00.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857184/pr-curitiba-agua-verde-avenida-republica-argentina-apartamento-a-venda-3-quartos-6976493f-01.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857184/pr-curitiba-agua-verde-avenida-republica-argentina-apartamento-a-venda-3-quartos-6976493f-02.jpg</Item>
+      </Media>
+      <ContactInfo>
+        <Email>planejaimobiliaria@gmail.com</Email>
+        <Name>PLANEJA NEGÓCIOS IMOBILIÁRIOS</Name>
+        <Telephone>(41) 3092-1001</Telephone>
+      </ContactInfo>
+      <Status>
+        <PropertyStatus>Available</PropertyStatus>
+        <StatusDate>14/03/2026</StatusDate>
+      </Status>
+    </Listing>
+    <Listing>
+      <ListingID>AP006</ListingID>
+      <ListDate>2026-03-14-04:06</ListDate>
+      <LastUpdateDate>2026-03-14-04:06</LastUpdateDate>
+      <TransactionType>For Sale</TransactionType>
+      <Title>Lindo Apartamento no Batel - 4 Dormitórios sendo 2 suítes, 2 vagas de Garagem - Semi mobiliado com possiblidade de porteira fechada</Title>
+      <Featured>false</Featured>
+      <PublicationType>STANDARD</PublicationType>
+      <Location displayAddress="Full">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="PR">Paraná</State>
+        <City>Curitiba</City>
+        <Zone/>
+        <Neighborhood>Batel</Neighborhood>
+        <Complement/>
+        <PostalCode/>
+        <Latitude/>
+        <Longitude/>
+      </Location>
+      <Details>
+        <Description>Lindo Apartamento no Batel - 4 Dormitórios sendo 2 suítes, 2 vagas de Garagem - Semi mobiliado com possiblidade de porteira fechada
+Referência: AP006
+CARACTERÍSTICAS DO IMÓVEL:
+• Avenida Silva Jardim
+• Apartamentos a venda no Jardim Botânico
+• Câmeras de segurança
+• Portaria 24h
+• Hall de entrada decorado
+• Cozinha
+• Salão de festas
+• Playground
+• Sistema de câmeras
+• Elevador(es)
+• Cozinha planejada
+• sol da tarde: Cozinha, Área de serviço e mais 2 dormitórios
+• Apartamentos a venda no Jardim das Américas</Description>
+        <SalePrice currency="BRL">1600000</SalePrice>
+        <PropertyType>Sala Comercial</PropertyType>
+        <LivingArea unit="square metres">167.0</LivingArea>
+        <Bedrooms>4</Bedrooms>
+        <Bathrooms>2</Bathrooms>
+        <Suites>2</Suites>
+        <ParkingSpaces>2</ParkingSpaces>
+        <MonthlyFee currency="BRL">1670</MonthlyFee>
+        <Features> </Features>
+      </Details>
+      <Media>
+        <Item medium="image" primary="true">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857172/pr-curitiba-agua-verde-rua-carneiro-lobo-apartamento-a-venda-4-quartos-697641d1-00.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857172/pr-curitiba-agua-verde-rua-carneiro-lobo-apartamento-a-venda-4-quartos-697641d1-01.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857172/pr-curitiba-agua-verde-rua-carneiro-lobo-apartamento-a-venda-4-quartos-697641d1-02.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857172/pr-curitiba-agua-verde-rua-carneiro-lobo-apartamento-a-venda-4-quartos-697641d1-03.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857172/pr-curitiba-agua-verde-rua-carneiro-lobo-apartamento-a-venda-4-quartos-697641d1-04.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857172/pr-curitiba-agua-verde-rua-carneiro-lobo-apartamento-a-venda-4-quartos-697641d1-05.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857172/pr-curitiba-agua-verde-rua-carneiro-lobo-apartamento-a-venda-4-quartos-697641d1-06.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857172/pr-curitiba-agua-verde-rua-carneiro-lobo-apartamento-a-venda-4-quartos-697641d1-07.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857172/pr-curitiba-agua-verde-rua-carneiro-lobo-apartamento-a-venda-4-quartos-697641d1-08.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857172/pr-curitiba-agua-verde-rua-carneiro-lobo-apartamento-a-venda-4-quartos-697641d1-09.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857172/pr-curitiba-agua-verde-rua-carneiro-lobo-apartamento-a-venda-4-quartos-697641d1-10.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857172/pr-curitiba-agua-verde-rua-carneiro-lobo-apartamento-a-venda-4-quartos-697641d1-11.jpg</Item>
+      </Media>
+      <ContactInfo>
+        <Email>planejaimobiliaria@gmail.com</Email>
+        <Name>PLANEJA NEGÓCIOS IMOBILIÁRIOS</Name>
+        <Telephone>(41) 3092-1001</Telephone>
+      </ContactInfo>
+      <Status>
+        <PropertyStatus>Available</PropertyStatus>
+        <StatusDate>14/03/2026</StatusDate>
+      </Status>
+    </Listing>
+    <Listing>
+      <ListingID>AP005</ListingID>
+      <ListDate>2026-03-14-04:06</ListDate>
+      <LastUpdateDate>2026-03-14-04:06</LastUpdateDate>
+      <TransactionType>For Sale</TransactionType>
+      <Title>Lindo Apartamento Garden no Cabral, 94m2 privativo + 16 m2 área externa, Face leste (sol da manhã) Prédio Novo, área de lazer completa</Title>
+      <Featured>false</Featured>
+      <PublicationType>STANDARD</PublicationType>
+      <Location displayAddress="Full">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="PR">Paraná</State>
+        <City>Curitiba</City>
+        <Zone/>
+        <Neighborhood>Juvevê</Neighborhood>
+        <Complement/>
+        <PostalCode/>
+        <Latitude/>
+        <Longitude/>
+      </Location>
+      <Details>
+        <Description>Lindo Apartamento Garden no Cabral, 94m2 privativo + 16 m2 área externa, Face leste (sol da manhã) Prédio Novo, área de lazer completa
+Referência: AP005
+CARACTERÍSTICAS DO IMÓVEL:
+• Apartamentos a venda no Jardim Social
+• Churrasqueira
+• Portaria 24h
+• Jardim
+• Hall de entrada decorado
+• Salão de festas
+• Acabamento em alto padrão
+• Playground
+• Infraestrutura de ar condicionado
+• Elevador(es)
+• Sistema de câmeras
+• Sacada com churrasqueira
+• Churrasqueira(s) coletiva(s)
+• Academia
+• Coworking</Description>
+        <SalePrice currency="BRL">1381000</SalePrice>
+        <PropertyType>Sala Comercial</PropertyType>
+        <LivingArea unit="square metres">94.0</LivingArea>
+        <Bedrooms>3</Bedrooms>
+        <Bathrooms>1</Bathrooms>
+        <Suites>0</Suites>
+        <ParkingSpaces>2</ParkingSpaces>
+        <Features> </Features>
+      </Details>
+      <Media>
+        <Item medium="image" primary="true">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857160/pr-curitiba-juveve-rua-bom-jesus-apartamento-a-venda-3-quartos-698132e1-00.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857160/pr-curitiba-juveve-rua-bom-jesus-apartamento-a-venda-3-quartos-698132e1-01.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857160/pr-curitiba-juveve-rua-bom-jesus-apartamento-a-venda-3-quartos-698132e1-02.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857160/pr-curitiba-juveve-rua-bom-jesus-apartamento-a-venda-3-quartos-698132e1-03.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857160/pr-curitiba-juveve-rua-bom-jesus-apartamento-a-venda-3-quartos-698132e1-04.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38857160/pr-curitiba-juveve-rua-bom-jesus-apartamento-a-venda-3-quartos-698132e1-05.jpg</Item>
+      </Media>
+      <ContactInfo>
+        <Email>planejaimobiliaria@gmail.com</Email>
+        <Name>PLANEJA NEGÓCIOS IMOBILIÁRIOS</Name>
+        <Telephone>(41) 3092-1001</Telephone>
+      </ContactInfo>
+      <Status>
+        <PropertyStatus>Available</PropertyStatus>
+        <StatusDate>14/03/2026</StatusDate>
+      </Status>
+    </Listing>
+    <Listing>
+      <ListingID>AP002</ListingID>
+      <ListDate>2026-03-14-04:06</ListDate>
+      <LastUpdateDate>2026-03-14-04:06</LastUpdateDate>
+      <TransactionType>For Sale</TransactionType>
+      <Title>Apartamento com 3 quartos à venda na Rua Valdivia, 222, Hugo Lange, Curitiba</Title>
+      <Featured>false</Featured>
+      <PublicationType>STANDARD</PublicationType>
+      <Location displayAddress="Full">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="PR">Paraná</State>
+        <City>Curitiba</City>
+        <Zone/>
+        <Neighborhood>Juvevê</Neighborhood>
+        <Complement/>
+        <PostalCode/>
+        <Latitude/>
+        <Longitude/>
+      </Location>
+      <Details>
+        <Description>Apartamento com 3 quartos à venda na Rua Valdivia, 222, Hugo Lange, Curitiba
+Referência: AP002
+CARACTERÍSTICAS DO IMÓVEL:
+• Apartamentos a venda no Jardim Luzitano
+• Acabamento em alto padrão
+• Sala conjugada com cozinha
+• - Elevador
+• Apartamentos a venda no Jardim Pedro Demeterco
+• Hall de entrada decorado
+• Salão de festas
+• Elevador(es)
+• Sacada com churrasqueira
+• Academia
+• - Salão de festas
+• Piscina
+• Jardim
+• Lindíssimo apartamento mobiliado e decorado, região norte de Curitiba, acabamento de alto padrão.
+• - Piscina adulta com borda infinita
+• Blackout nas janelas
+• Infraestrutura de ar condicionado
+• Piscina aquecida
+• Apartamentos a venda no Jardim Social
+• - Cozinha Americana
+• - Churrasqueira
+• - Hall de entrada decorado e mobiliado
+• Churrasqueira
+• Ar Condicionado
+• Apartamentos a venda no Jardim Cláudia
+• Isolamento acústico
+• Sistema de câmeras
+• Fechadura biométrica
+• - Acabamento em gesso
+• - Churrasqueira na varanda</Description>
+        <SalePrice currency="BRL">2499280</SalePrice>
+        <PropertyType>Sala Comercial</PropertyType>
+        <LivingArea unit="square metres">147.0</LivingArea>
+        <Bedrooms>3</Bedrooms>
+        <Bathrooms>3</Bathrooms>
+        <Suites>0</Suites>
+        <ParkingSpaces>2</ParkingSpaces>
+        <MonthlyFee currency="BRL">1200</MonthlyFee>
+        <Features> </Features>
+      </Details>
+      <Media>
+        <Item medium="image" primary="true">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-00.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-01.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-02.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-03.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-04.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-05.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-06.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-07.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-08.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-09.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-10.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-11.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-12.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-13.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-14.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-15.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-16.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-17.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641655/pr-curitiba-hugo-lange-rua-valdivia-apartamento-a-venda-3-quartos-696ea261-18.jpg</Item>
+      </Media>
+      <ContactInfo>
+        <Email>planejaimobiliaria@gmail.com</Email>
+        <Name>PLANEJA NEGÓCIOS IMOBILIÁRIOS</Name>
+        <Telephone>(41) 3092-1001</Telephone>
+      </ContactInfo>
+      <Status>
+        <PropertyStatus>Available</PropertyStatus>
+        <StatusDate>14/03/2026</StatusDate>
+      </Status>
+    </Listing>
+    <Listing>
+      <ListingID>CO001</ListingID>
+      <ListDate>2026-03-14-04:06</ListDate>
+      <LastUpdateDate>2026-03-14-04:06</LastUpdateDate>
+      <TransactionType>For Sale</TransactionType>
+      <Title>Cobertura com 3 quartos à venda na Rua Bom Jesus, 928, Juvevê, Curitiba</Title>
+      <Featured>false</Featured>
+      <PublicationType>STANDARD</PublicationType>
+      <Location displayAddress="Full">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="PR">Paraná</State>
+        <City>Curitiba</City>
+        <Zone/>
+        <Neighborhood>Batel</Neighborhood>
+        <Complement/>
+        <PostalCode/>
+        <Latitude/>
+        <Longitude/>
+      </Location>
+      <Details>
+        <Description>Cobertura com 3 quartos à venda na Rua Bom Jesus, 928, Juvevê, Curitiba
+Referência: CO001
+CARACTERÍSTICAS DO IMÓVEL:
+• Acabamento em alto padrão
+• Elevador(es) de serviço
+• Portaria 24h
+• Hall de entrada decorado
+• Salão de festas
+• Portaria
+• Elevador(es)
+• Sacada com churrasqueira
+• Academia
+• Quadra de esporte
+• Piscina
+• Jardim
+• Playground
+• Infraestrutura de ar condicionado
+• Churrasqueira(s) coletiva(s)
+• Piscina aquecida
+• Academias
+• Churrasqueira
+• No Juvevê tem academias ideais para manter a saúde em dia.
+• Isolamento acústico
+• Sistema de câmeras
+• Fechadura biométrica</Description>
+        <SalePrice currency="BRL">2200000</SalePrice>
+        <PropertyType>Sala Comercial</PropertyType>
+        <LivingArea unit="square metres">185.0</LivingArea>
+        <Bedrooms>3</Bedrooms>
+        <Bathrooms>1</Bathrooms>
+        <Suites>1</Suites>
+        <ParkingSpaces>2</ParkingSpaces>
+        <MonthlyFee currency="BRL">660</MonthlyFee>
+        <Features> </Features>
+      </Details>
+      <Media>
+        <Item medium="image" primary="true">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-00.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-01.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-02.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-03.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-04.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-05.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-06.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-07.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-08.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-09.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-10.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-11.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-12.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-13.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-14.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-15.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-16.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-17.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-18.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-19.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-20.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-21.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-22.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-23.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-24.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-25.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-26.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-27.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-28.jpg</Item>
+        <Item medium="image">https://www.chavesnamao.com.br/imn/1200x0800/N/60/imoveis/1151744/38641245/pr-curitiba-juveve-rua-bom-jesus-cobertura-a-venda-3-quartos-696e9a13-29.jpg</Item>
+      </Media>
+      <ContactInfo>
+        <Email>planejaimobiliaria@gmail.com</Email>
+        <Name>PLANEJA NEGÓCIOS IMOBILIÁRIOS</Name>
+        <Telephone>(41) 3092-1001</Telephone>
+      </ContactInfo>
+      <Status>
+        <PropertyStatus>Available</PropertyStatus>
+        <StatusDate>14/03/2026</StatusDate>
+      </Status>
+    </Listing>
+  </Listings>
+</ListingDataFeed>

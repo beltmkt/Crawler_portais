@@ -1,0 +1,806 @@
+
+        <html>
+        <head>
+        <title>Brandbook www.gaveaimobi.com.br</title>
+        <meta charset="UTF-8">
+        <style>
+            * { 
+                box-sizing: border-box; 
+                margin: 0;
+                padding: 0;
+            }
+            body { 
+                font-family: 'Segoe UI', Arial, sans-serif; 
+                margin: 0; 
+                padding: 20px; 
+                background: #f5f5f5;
+                color: #333;
+            }
+            .container { 
+                max-width: 1400px; 
+                margin: 0 auto;
+                width: 100%;
+            }
+            h1 { 
+                color: #2c3e50; 
+                border-bottom: 4px solid #3498db; 
+                padding-bottom: 15px;
+                margin: 0 0 20px 0;
+                font-size: 28px;
+            }
+            h2 { 
+                color: #34495e; 
+                border-bottom: 2px solid #bdc3c7; 
+                padding-bottom: 8px; 
+                margin: 25px 0 15px 0;
+                font-size: 24px;
+            }
+            h3 { 
+                color: #7f8c8d; 
+                margin: 20px 0 10px 0;
+                font-size: 20px;
+            }
+            h4 {
+                font-size: 18px;
+                margin: 15px 0 10px 0;
+            }
+            h5 {
+                font-size: 16px;
+                margin: 12px 0 8px 0;
+                color: #555;
+            }
+            
+            .stats-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+                margin: 20px 0;
+            }
+            .stat-card {
+                background: white;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                text-align: center;
+                border-top: 4px solid #3498db;
+            }
+            .stat-number {
+                font-size: 28px;
+                font-weight: bold;
+                color: #2c3e50;
+                display: block;
+            }
+            .stat-label {
+                color: #7f8c8d;
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+            
+            .page-card {
+                background: white;
+                margin: 25px 0;
+                border-radius: 12px;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+                overflow: hidden;
+                width: 100%;
+            }
+            .page-header {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 15px 20px;
+                cursor: pointer;
+                user-select: none;
+            }
+            .page-header:hover {
+                opacity: 0.95;
+            }
+            .page-header h3 {
+                margin: 0 0 5px 0;
+                color: white;
+                font-size: 20px;
+            }
+            .page-header small {
+                opacity: 0.9;
+                font-size: 13px;
+                display: block;
+                margin-bottom: 8px;
+            }
+            .importance-badge {
+                background: #ffd700;
+                color: #2c3e50;
+                padding: 4px 10px;
+                border-radius: 20px;
+                font-size: 12px;
+                font-weight: bold;
+                display: inline-block;
+                margin-right: 8px;
+            }
+            
+            .page-content {
+                padding: 20px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                max-height: 600px;
+                overflow-y: auto;
+            }
+            
+            @media (max-width: 768px) {
+                .page-content {
+                    grid-template-columns: 1fr;
+                }
+            }
+            
+            .visual-section, .text-section {
+                background: #f8f9fa;
+                padding: 15px;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            
+            .image-gallery {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin: 8px 0;
+                max-height: 200px;
+                overflow-y: auto;
+                padding: 5px;
+                border: 1px solid #eee;
+                border-radius: 5px;
+                background: white;
+            }
+            .image-gallery img {
+                border: 1px solid #ddd;
+                padding: 2px;
+                background: white;
+                max-width: 100px;
+                max-height: 100px;
+                object-fit: contain;
+                border-radius: 4px;
+                transition: transform 0.2s;
+                cursor: pointer;
+            }
+            .image-gallery img:hover {
+                transform: scale(1.1);
+                box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+                z-index: 10;
+            }
+            
+            .gallery-expand {
+                background: #3498db;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 12px;
+                margin: 5px 0;
+            }
+            .gallery-expand:hover {
+                background: #2980b9;
+            }
+            
+            .full-gallery-modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.9);
+                overflow: auto;
+            }
+            .full-gallery-content {
+                position: relative;
+                margin: 50px auto;
+                padding: 20px;
+                width: 90%;
+                max-width: 1200px;
+                background: white;
+                border-radius: 10px;
+            }
+            .close-modal {
+                position: absolute;
+                right: 25px;
+                top: 10px;
+                color: #333;
+                font-size: 35px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .close-modal:hover {
+                color: #f00;
+            }
+            .full-gallery-grid {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                margin-top: 30px;
+                max-height: 70vh;
+                overflow-y: auto;
+                padding: 10px;
+            }
+            .full-gallery-grid img {
+                max-width: 200px;
+                max-height: 200px;
+                object-fit: contain;
+                border: 2px solid #ddd;
+                padding: 5px;
+                background: white;
+                border-radius: 5px;
+            }
+            
+            .color-palette {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px;
+                margin: 10px 0;
+                max-height: 100px;
+                overflow-y: auto;
+                padding: 5px;
+                background: white;
+                border-radius: 5px;
+            }
+            .color-box {
+                width: 40px;
+                height: 40px;
+                border-radius: 6px;
+                border: 2px solid white;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                cursor: pointer;
+                transition: transform 0.2s;
+                flex-shrink: 0;
+            }
+            .color-box:hover {
+                transform: scale(1.15);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                z-index: 10;
+            }
+            
+            .text-item {
+                background: white;
+                padding: 10px 12px;
+                margin: 6px 0;
+                border-radius: 6px;
+                border-left: 4px solid #3498db;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+                font-size: 14px;
+                max-height: 80px;
+                overflow-y: auto;
+            }
+            .heading-item { border-left-color: #9b59b6; }
+            .button-item { border-left-color: #2ecc71; }
+            
+            .meta-info {
+                background: #e8f4f8;
+                padding: 12px;
+                border-radius: 6px;
+                margin: 10px 0;
+                font-size: 13px;
+                max-height: 150px;
+                overflow-y: auto;
+            }
+            
+            .footer {
+                text-align: center;
+                margin-top: 40px;
+                padding: 20px;
+                color: #7f8c8d;
+                border-top: 2px solid #bdc3c7;
+                font-size: 13px;
+            }
+            
+            .toc {
+                background: white;
+                padding: 15px;
+                border-radius: 10px;
+                margin: 20px 0;
+                border: 1px solid #ddd;
+                max-height: 400px;
+                overflow-y: auto;
+            }
+            .toc-header {
+                background: #f0f0f0;
+                padding: 10px 15px;
+                margin: -15px -15px 15px -15px;
+                border-radius: 10px 10px 0 0;
+                border-bottom: 2px solid #3498db;
+                cursor: pointer;
+                user-select: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .toc-header:hover {
+                background: #e0e0e0;
+            }
+            .toc-header h4 {
+                margin: 0;
+                color: #2c3e50;
+            }
+            .toc-arrow {
+                font-size: 20px;
+                transition: transform 0.3s;
+            }
+            .toc-content {
+                transition: max-height 0.3s ease-out;
+                overflow: hidden;
+            }
+            .toc-content.collapsed {
+                max-height: 0;
+                padding: 0;
+                margin: 0;
+            }
+            .toc-content.expanded {
+                max-height: 300px;
+                overflow-y: auto;
+            }
+            .toc a {
+                color: #3498db;
+                text-decoration: none;
+                display: block;
+                padding: 6px 10px;
+                border-bottom: 1px solid #eee;
+                font-size: 14px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .toc a:hover {
+                background: #f0f7ff;
+            }
+            
+            .badge {
+                display: inline-block;
+                padding: 2px 6px;
+                border-radius: 10px;
+                font-size: 10px;
+                font-weight: bold;
+                margin-left: 5px;
+            }
+            .badge-home { background: #27ae60; color: white; }
+            .badge-important { background: #f39c12; color: white; }
+            .badge-youtube { background: #ff0000; color: white; }
+            
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 14px;
+                background: white;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+            th, td {
+                padding: 8px 10px;
+                text-align: left;
+                border-bottom: 1px solid #eee;
+            }
+            th {
+                background: #34495e;
+                color: white;
+            }
+            
+            hr {
+                margin: 15px 0;
+                border: none;
+                border-top: 1px solid #ddd;
+            }
+            
+            .video-container {
+                max-height: 300px;
+                overflow-y: auto;
+                padding: 5px;
+                background: white;
+                border-radius: 5px;
+            }
+            .video-item {
+                display: block;
+                padding: 8px;
+                margin: 5px 0;
+                background: #f0f0f0;
+                border-radius: 5px;
+                font-size: 12px;
+                border-left: 4px solid #e74c3c;
+            }
+            .video-item a {
+                color: #3498db;
+                text-decoration: none;
+            }
+            .video-item a:hover {
+                text-decoration: underline;
+            }
+            .video-local {
+                display: block;
+                font-size: 11px;
+                color: #27ae60;
+                margin-top: 3px;
+            }
+            video {
+                max-width: 100%;
+                max-height: 150px;
+                margin: 5px 0;
+            }
+        </style>
+        </head>
+
+        <body>
+            <div class="container">
+                <h1>📘 Brandbook - www.gaveaimobi.com.br</h1>
+                <p><strong>Data de extração:</strong> 11/03/2026 18:28</p>
+                <p><strong>Padrões identificados no menu:</strong> Nenhum padrão específico</p>
+                
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Páginas</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">111</span>
+                        <span class="stat-label">Imagens</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Vídeos</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">1</span>
+                        <span class="stat-label">Cores</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Fontes</span>
+                    </div>
+                </div>
+                
+                <!-- Ranking de Páginas (Agora como dropdown) -->
+                <div class="toc" id="ranking-section">
+                    <div class="toc-header" onclick="toggleRanking()">
+                        <h4>📊 RANKING DE PÁGINAS POR IMPORTÂNCIA</h4>
+                        <span class="toc-arrow" id="ranking-arrow">▼</span>
+                    </div>
+                    <div id="ranking-content" class="toc-content expanded">
+                        <a href="#page-1">⭐ 1. Imóveis à Venda e para Alugar em Santos, São Vicen... <span class="badge badge-home">Home</span></a><a href="#page-2">📄 2. Quem Somos | Gávea Imobiliária em Santos, São Vice... <span class="badge badge-important">Importante</span></a><a href="#page-3">📄 3. Conheça o nosso Blog <span class="badge badge-important">Importante</span></a>
+                    </div>
+                </div>
+                
+                <!-- Visão Geral -->
+                <div class="page-card">
+                    <div class="page-header" onclick="toggleSection('global-section')">
+                        <h3>📊 VISÃO GERAL - TODAS AS PÁGINAS</h3>
+                        <small>Clique para expandir/recolher</small>
+                    </div>
+                    <div id="global-section" class="page-content" style="display: grid;">
+                        <div class="visual-section">
+                            <h4>🎨 Identidade Visual Global</h4>
+                            
+                            <h5>Paleta de Cores Principal</h5>
+                            <div class="color-palette">
+                            <div class="color-box" style="background:#ff253a;" title="#ff253a" onclick="copyColor('#ff253a')"></div>
+                            </div>
+                            
+                            <h5>Fontes Utilizadas</h5>
+                            <div class="text-item">
+                            Nenhuma fonte Google Fonts encontrada
+                            </div>
+                            
+                            <h5>Logos (Global) - 2 encontrados</h5>
+                            
+                            <div class="image-gallery" id="global-logos-preview">
+                            <img src="https://cdn.imoview.com.br/gavea/Site/imagens/47yh9am9.png" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/2vfz5w4n.png" onclick="window.open(this.src)">
+                            </div>
+                            
+                            <h5>Banners (Global) - 5 encontrados</h5>
+                            
+                            <div class="image-gallery" id="global-banners-preview">
+                            <img src="https://cdn.imoview.com.br/gavea/Site/imagens/b4razket.png" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/bc7d4fsg.png" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/1col0grp.png" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/ce0kullm.png" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/gd1gxtpr.png" onclick="window.open(this.src)">
+                            </div>
+                            
+                            <h5>Vídeos (Global) - 0 encontrados</h5>
+                            <div class="video-container">
+                            <p>Nenhum vídeo encontrado</p>
+                            
+                            </div>
+                        </div>
+                        
+                        <div class="text-section">
+                            <h4>📈 Estatísticas por Tipo de Página</h4>
+                            <table><tr><th>Tipo</th><th>Páginas</th><th>Imagens</th><th>Vídeos</th><th>Textos</th></tr><tr><td>Home</td><td>1</td><td>59</td><td>0</td><td>36</td></tr><tr><td>Outras</td><td>1</td><td>50</td><td>0</td><td>26</td></tr><tr><td>Blog/Notícias</td><td>1</td><td>8</td><td>0</td><td>8</td></tr></table>
+                            
+                            <h4>📁 Arquivos Baixados</h4>
+                            <div class="text-item">
+                                <p><strong>Imagens:</strong> 240 arquivos</p>
+                                <p><strong>Vídeos:</strong> 0 arquivos</p>
+                                <p><small>Pasta: C:\Users\Usuario\OneDrive\Área de Trabalho\SiteMidiaDetector\brandbook_output</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Páginas Individuais -->
+                
+            <div class="page-card" id="page-1">
+                <div class="page-header" style="background: linear-gradient(135deg, #27ae60 0%, #34495e 100%);">
+                    <h3>📄 PÁGINA 1: Imóveis à Venda e para Alugar em Santos, São Vicente e Praia...</h3>
+                    <small>https://www.gaveaimobi.com.br/</small>
+                    <div>
+                        <span class="importance-badge">Importância: 178</span>
+                        <span class="importance-badge" style="background:#27ae60;">📧 Contato</span>
+                        
+                        
+                    </div>
+                </div>
+                
+                <div class="page-content">
+                    <div class="visual-section">
+                        <h4>🎨 Elementos Visuais</h4>
+                        
+                        
+            <h5>Logos (2)</h5>
+            
+            <div class="image-gallery">
+            <img src="https://cdn.imoview.com.br/gavea/Site/imagens/47yh9am9.png" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/2vfz5w4n.png" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)">
+            
+            </div>
+        
+                        
+            <h5>Banners (5)</h5>
+            
+            <div class="image-gallery">
+            <img src="https://cdn.imoview.com.br/gavea/Site/imagens/b4razket.png" style="max-width:100px; max-height:100px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/bc7d4fsg.png" style="max-width:100px; max-height:100px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/1col0grp.png" style="max-width:100px; max-height:100px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/ce0kullm.png" style="max-width:100px; max-height:100px;" onclick="window.open(this.src)">
+            <p><small>... e mais 1</small></p>
+            </div>
+        
+                        
+            <h5>Ícones (4)</h5>
+            
+            <div class="image-gallery">
+            <img src="https://gaveaimobi.com.br/assets/icons/icon-phone-branco.svg" style="max-width:40px; max-height:40px;" onclick="window.open(this.src)"><img src="https://gaveaimobi.com.br/assets/icons/icon-favorito-ativo.svg" style="max-width:40px; max-height:40px;" onclick="window.open(this.src)"><img src="https://gaveaimobi.com.br/assets/icons/redes-sociais/icon-whatsapp-branco.svg" style="max-width:40px; max-height:40px;" onclick="window.open(this.src)"><img src="https://www.gaveaimobi.com.br/assets/icons/icon-favorito.svg" style="max-width:40px; max-height:40px;" onclick="window.open(this.src)">
+            
+            </div>
+        
+                        
+            <h5>Imagens (52)</h5>
+            
+            <div class="image-gallery">
+            <img src="https://cdn.imoview.com.br/gavea/Imoveis/24627/4k71t-whatsapp-image-2024-12-13-at-225227-30-1734408982.jpeg" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Imoveis/25059/m2mqc-img-3179-2-1773087003.jpg" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Imoveis/25026/9bffh-img-2483-1772735810.jpg" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Imoveis/24627/0h1rif-img-9898-1755790487.jpg" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Imoveis/21382/QLqrdbkqGrMzmZke8RXBHUB0-20220609_112544.jpg" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://www.gaveaimobi.com.br/assets/icons/icons-tema-clean/icon-shower.svg" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)">
+            <p><small>... e mais 46</small></p>
+            </div>
+        
+                        
+                        <h5>Cores da Página</h5>
+                        <div class="color-palette">
+                        <div class="color-box" style="background:#ff253a;" title="#ff253a" onclick="copyColor('#ff253a')"></div>
+                        
+                        </div>
+                        
+                        
+                        
+                    </div>
+                    
+                    <div class="text-section">
+                        <h4>📝 Conteúdo Textual</h4>
+                        
+                        <div class="meta-info"><p><strong>Meta Description:</strong> Descubra os melhores imóveis em Santos, São Vicente e Praia Grande com a Gávea Imobiliária. Atendime...</p></div>
+                        <h5>Títulos (32)</h5><div class="text-item heading-item"><strong>H1:</strong> Encontre o seu imóvel agora!</div><div class="text-item heading-item"><strong>H2:</strong> Oportunidades</div><div class="text-item heading-item"><strong>H2:</strong> Apartamento  à venda no Jardim Independência</div><div class="text-item heading-item"><strong>H2:</strong> Sobrado  à venda no Japuí</div><div class="text-item heading-item"><strong>H2:</strong> Apartamento  à venda no Itararé</div><div class="text-item heading-item"><strong>H2:</strong> Apartamento  à venda no Centro</div><div class="text-item heading-item"><strong>H2:</strong> Apartamento  à venda no Marapé</div><p><small>... e mais 25 títulos</small></p>
+                        <h5>Parágrafos (4)</h5><div class="text-item">Imóveis à Venda e Aluguel em Santos, São Vicente, Praia Grande e Litoral Norte</div><div class="text-item">Loja 1:Rua Jose Caballero 69, Gonzaga, Santos.Loja 2:Rua Messia Assú 151, Itararé, São Vicente.</div><div class="text-item">Horário de atendimento:seg a sexta de 9h às 19h / sáb e dom de 9h às 18h</div><div class="text-item">© 2026 | Gávea Imobiliária | CRECI: 034466-J | Desenvolvido porUniversal Software.</div>
+                        <h5>Botões (9)</h5><div class="text-item button-item">✖</div><div class="text-item button-item">×</div><div class="text-item button-item">BUSCAR IMÓVEIS</div><div class="text-item button-item">1</div><div class="text-item button-item">Comprar</div><div class="text-item button-item">Alugar</div>
+                        <h5>Menu</h5><div class="text-item"><a href="https://gaveaimobi.com.br/venda/" target="_blank">COMPRAR</a></div><div class="text-item"><a href="https://gaveaimobi.com.br/aluguel/" target="_blank">ALUGAR</a></div><div class="text-item"><a href="https://gaveaimobi.com.br/anuncie-seu-imovel" target="_blank">CADASTRAR SEU IMÓVEL</a></div><div class="text-item"><a href="https://gaveaimobi.com.br/contato" target="_blank">CONTATO</a></div><div class="text-item"><a href="https://gaveaimobi.com.br/venda" target="_blank">Imóveis à venda</a></div>
+                        <h5>Rodapé</h5><div class="text-item">Imóveis à Venda e Aluguel em Santos, São Vicente, Praia Grande e Litoral NorteA ...</div><div class="text-item">PrivacidadeBlogNossa equipeOuvidoriaCRECI: 034996-JIMÓVEISImóveis para comprarIm...</div><div class="text-item">clienteATENDIMENTOcontato@gaveaimobi.com.brLoja 1:Rua Jose Caballero 69, Gonzaga...</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="page-card" id="page-2">
+                <div class="page-header" style="background: linear-gradient(135deg, #3498db 0%, #34495e 100%);">
+                    <h3>📄 PÁGINA 2: Quem Somos | Gávea Imobiliária em Santos, São Vicente e Prai...</h3>
+                    <small>https://www.gaveaimobi.com.br/venda/cobertura/</small>
+                    <div>
+                        <span class="importance-badge">Importância: 47.019999999999996</span>
+                        <span class="importance-badge" style="background:#27ae60;">📧 Contato</span>
+                        
+                        
+                    </div>
+                </div>
+                
+                <div class="page-content">
+                    <div class="visual-section">
+                        <h4>🎨 Elementos Visuais</h4>
+                        
+                        
+            <h5>Logos (2)</h5>
+            
+            <div class="image-gallery">
+            <img src="https://cdn.imoview.com.br/gavea/Site/imagens/47yh9am9.png" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/2vfz5w4n.png" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)">
+            
+            </div>
+        
+                        
+                        
+            <h5>Ícones (4)</h5>
+            
+            <div class="image-gallery">
+            <img src="https://gaveaimobi.com.br/assets/icons/icon-phone-branco.svg" style="max-width:40px; max-height:40px;" onclick="window.open(this.src)"><img src="https://gaveaimobi.com.br/assets/icons/icon-favorito-ativo.svg" style="max-width:40px; max-height:40px;" onclick="window.open(this.src)"><img src="https://gaveaimobi.com.br/assets/icons/redes-sociais/icon-whatsapp-branco.svg" style="max-width:40px; max-height:40px;" onclick="window.open(this.src)"><img src="https://www.gaveaimobi.com.br/assets/icons/icon-favorito.svg" style="max-width:40px; max-height:40px;" onclick="window.open(this.src)">
+            
+            </div>
+        
+                        
+            <h5>Imagens (48)</h5>
+            
+            <div class="image-gallery">
+            <img src="https://cdn.imoview.com.br/gavea/Imoveis/10660/whatsapp-image-2022-10-26-at-124540-3.jpeg" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Imoveis/13473/gnqid-whatsapp-image-2023-05-10-at-110946-2-1683729656.jpeg" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://www.gaveaimobi.com.br/assets/icons/icons-tema-clean/icon-shower.svg" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Imoveis/6964/t92ool-whatsapp-image-2023-10-16-at-153600-1697482817.jpeg" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Imoveis/14132/tiaur-20230624-110830-1687739265.jpg" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Imoveis/6443/fbzu7-16-1713557065.jpeg" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)">
+            <p><small>... e mais 42</small></p>
+            </div>
+        
+                        
+                        <h5>Cores da Página</h5>
+                        <div class="color-palette">
+                        <div class="color-box" style="background:#ff253a;" title="#ff253a" onclick="copyColor('#ff253a')"></div>
+                        
+                        </div>
+                        
+                        
+                        
+                    </div>
+                    
+                    <div class="text-section">
+                        <h4>📝 Conteúdo Textual</h4>
+                        
+                        <div class="meta-info"><p><strong>Meta Description:</strong> A Gávea Imobiliária atua em Santos, São Vicente e Praia Grande, oferecendo compra, venda e locação d...</p></div>
+                        <h5>Títulos (22)</h5><div class="text-item heading-item"><strong>H1:</strong> 85  Coberturas  à venda na Região de Santos</div><div class="text-item heading-item"><strong>H2:</strong> Cobertura  à venda no José Menino</div><div class="text-item heading-item"><strong>H2:</strong> Cobertura  à venda no Ponta da Praia</div><div class="text-item heading-item"><strong>H2:</strong> Cobertura  à venda no Itararé</div><div class="text-item heading-item"><strong>H2:</strong> Cobertura  à venda no Boqueirão  no condomínio Supremo Boqueirão</div><div class="text-item heading-item"><strong>H2:</strong> Cobertura  à venda no Embaré</div><p><small>... e mais 16 títulos</small></p>
+                        <h5>Parágrafos (4)</h5><div class="text-item">Imóveis à Venda e Aluguel em Santos, São Vicente, Praia Grande e Litoral Norte</div><div class="text-item">Loja 1:Rua Jose Caballero 69, Gonzaga, Santos.Loja 2:Rua Messia Assú 151, Itararé, São Vicente.</div><div class="text-item">Horário de atendimento:seg a sexta de 9h às 19h / sáb e dom de 9h às 18h</div><div class="text-item">© 2026 | Gávea Imobiliária | CRECI: 034466-J | Desenvolvido porUniversal Software.</div>
+                        <h5>Botões (10)</h5><div class="text-item button-item">✖</div><div class="text-item button-item">×</div><div class="text-item button-item">1</div><div class="text-item button-item">2</div><div class="text-item button-item">3</div><div class="text-item button-item">4+</div>
+                        <h5>Menu</h5><div class="text-item"><a href="https://gaveaimobi.com.br/venda/" target="_blank">COMPRAR</a></div><div class="text-item"><a href="https://gaveaimobi.com.br/aluguel/" target="_blank">ALUGAR</a></div><div class="text-item"><a href="https://gaveaimobi.com.br/anuncie-seu-imovel" target="_blank">CADASTRAR SEU IMÓVEL</a></div><div class="text-item"><a href="https://gaveaimobi.com.br/contato" target="_blank">CONTATO</a></div><div class="text-item"><a href="https://gaveaimobi.com.br/venda" target="_blank">Imóveis à venda</a></div>
+                        <h5>Rodapé</h5><div class="text-item">Imóveis à Venda e Aluguel em Santos, São Vicente, Praia Grande e Litoral NorteA ...</div><div class="text-item">PrivacidadeBlogNossa equipeOuvidoriaCRECI: 034996-JIMÓVEISImóveis para comprarIm...</div><div class="text-item">clienteATENDIMENTOcontato@gaveaimobi.com.brLoja 1:Rua Jose Caballero 69, Gonzaga...</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="page-card" id="page-3">
+                <div class="page-header" style="background: linear-gradient(135deg, #3498db 0%, #34495e 100%);">
+                    <h3>📄 PÁGINA 3: Conheça o nosso Blog</h3>
+                    <small>https://www.gaveaimobi.com.br/blog</small>
+                    <div>
+                        <span class="importance-badge">Importância: 47.004</span>
+                        <span class="importance-badge" style="background:#27ae60;">📧 Contato</span>
+                        <span class="importance-badge" style="background:#e74c3c;">📝 Formulário</span>
+                        
+                    </div>
+                </div>
+                
+                <div class="page-content">
+                    <div class="visual-section">
+                        <h4>🎨 Elementos Visuais</h4>
+                        
+                        
+            <h5>Logos (2)</h5>
+            
+            <div class="image-gallery">
+            <img src="https://cdn.imoview.com.br/gavea/Site/imagens/47yh9am9.png" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/2vfz5w4n.png" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)">
+            
+            </div>
+        
+                        
+                        
+            <h5>Ícones (3)</h5>
+            
+            <div class="image-gallery">
+            <img src="https://gaveaimobi.com.br/assets/icons/icon-phone-branco.svg" style="max-width:40px; max-height:40px;" onclick="window.open(this.src)"><img src="https://gaveaimobi.com.br/assets/icons/icon-favorito-ativo.svg" style="max-width:40px; max-height:40px;" onclick="window.open(this.src)"><img src="https://gaveaimobi.com.br/assets/icons/redes-sociais/icon-whatsapp-branco.svg" style="max-width:40px; max-height:40px;" onclick="window.open(this.src)">
+            
+            </div>
+        
+                        
+            <h5>Imagens (6)</h5>
+            
+            <div class="image-gallery">
+            <img src="https://www.gaveaimobi.com.br/assets/icons/icon-map-branco.svg" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/i1626wgf.png" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/xmxbc1p.png" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://gaveaimobi.com.br/assets/icons/icons-tema-clean/search.svg" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/e3569o73.png" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/h20tebqn.png" style="max-width:80px; max-height:80px;" onclick="window.open(this.src)">
+            
+            </div>
+        
+                        
+                        <h5>Cores da Página</h5>
+                        <div class="color-palette">
+                        <div class="color-box" style="background:#ff253a;" title="#ff253a" onclick="copyColor('#ff253a')"></div>
+                        
+                        </div>
+                        
+                        
+                        
+                    </div>
+                    
+                    <div class="text-section">
+                        <h4>📝 Conteúdo Textual</h4>
+                        
+                        <div class="meta-info"><p><strong>Meta Description:</strong> Fique por dentro do mercado imobiliário com dicas, novidades e tendências em nosso blog. Conteúdo ex...</p></div>
+                        
+                        <h5>Parágrafos (8)</h5><div class="text-item">Veja como se tornar corretor de imóveis em Santos, por que atuar no m...</div><div class="text-item">Veja o guia completo para comprar imóvel no litoral. Entenda etapas, ...</div><div class="text-item">O que faz os imóveis em Santos se valorizarem acima da média</div><div class="text-item">Infraestrutura, localização e qualidade de vida em um dos bairros ma...</div><div class="text-item">Imóveis à Venda e Aluguel em Santos, São Vicente, Praia Grande e Litoral Norte</div><p><small>... e mais 3 parágrafos</small></p>
+                        <h5>Botões (6)</h5><div class="text-item button-item">✖</div><div class="text-item button-item">×</div><div class="text-item button-item">DESTAQUES</div><div class="text-item button-item">RECENTES</div><div class="text-item button-item">Aceito</div><div class="text-item button-item">ÁREA DO CLIENTE</div>
+                        <h5>Menu</h5><div class="text-item"><a href="https://gaveaimobi.com.br/venda/" target="_blank">COMPRAR</a></div><div class="text-item"><a href="https://gaveaimobi.com.br/aluguel/" target="_blank">ALUGAR</a></div><div class="text-item"><a href="https://gaveaimobi.com.br/anuncie-seu-imovel" target="_blank">CADASTRAR SEU IMÓVEL</a></div><div class="text-item"><a href="https://gaveaimobi.com.br/contato" target="_blank">CONTATO</a></div><div class="text-item"><a href="https://gaveaimobi.com.br/" target="_blank">Home</a></div>
+                        <h5>Rodapé</h5><div class="text-item">Imóveis à Venda e Aluguel em Santos, São Vicente, Praia Grande e Litoral NorteA ...</div><div class="text-item">PrivacidadeBlogNossa equipeOuvidoriaCRECI: 034996-JIMÓVEISImóveis para comprarIm...</div><div class="text-item">clienteATENDIMENTOcontato@gaveaimobi.com.brLoja 1:Rua Jose Caballero 69, Gonzaga...</div>
+                    </div>
+                </div>
+            </div>
+            
+                
+                <div class="footer">
+                    <p>Brandbook gerado automaticamente - 11/03/2026 18:28</p>
+                    <p><small>Clique nas imagens para abrir em tamanho real | Clique nas cores para copiar o código</small></p>
+                </div>
+            </div>
+            
+            <!-- Modais para galerias completas -->
+            
+                <div id="modal-page-1-banners" class="full-gallery-modal">
+                    <div class="full-gallery-content">
+                        <span class="close-modal" onclick="closeGallery('modal-page-1-banners')">&times;</span>
+                        <h3>Banners da Página 1: Imóveis à Venda e para Alugar em Santos, São Vicen</h3>
+                        <div class="full-gallery-grid">
+                            <img src="https://cdn.imoview.com.br/gavea/Site/imagens/b4razket.png" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/bc7d4fsg.png" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/1col0grp.png" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/ce0kullm.png" onclick="window.open(this.src)"><img src="https://cdn.imoview.com.br/gavea/Site/imagens/gd1gxtpr.png" onclick="window.open(this.src)">
+                        </div>
+                    </div>
+                </div>
+                
+            
+            <script>
+                function toggleSection(id) {
+                    var section = document.getElementById(id);
+                    if (section.style.display === "none" || section.style.display === "") {
+                        section.style.display = "grid";
+                    } else {
+                        section.style.display = "none";
+                    }
+                }
+                
+                function toggleRanking() {
+                    var content = document.getElementById('ranking-content');
+                    var arrow = document.getElementById('ranking-arrow');
+                    
+                    if (content.classList.contains('expanded')) {
+                        content.classList.remove('expanded');
+                        content.classList.add('collapsed');
+                        arrow.innerHTML = '▶';
+                    } else {
+                        content.classList.remove('collapsed');
+                        content.classList.add('expanded');
+                        arrow.innerHTML = '▼';
+                    }
+                }
+                
+                function copyColor(color) {
+                    navigator.clipboard.writeText(color).then(function() {
+                        alert('Cor ' + color + ' copiada!');
+                    });
+                }
+                
+                function openGallery(modalId) {
+                    document.getElementById(modalId).style.display = 'block';
+                }
+                
+                function closeGallery(modalId) {
+                    document.getElementById(modalId).style.display = 'none';
+                }
+                
+                // Fecha modal ao clicar fora
+                window.onclick = function(event) {
+                    if (event.target.classList.contains('full-gallery-modal')) {
+                        event.target.style.display = 'none';
+                    }
+                }
+                
+                // Expande/recolhe páginas
+                document.querySelectorAll('.page-header').forEach(header => {
+                    header.addEventListener('click', function() {
+                        var content = this.nextElementSibling;
+                        if (content.style.display === "none" || content.style.display === "") {
+                            content.style.display = "grid";
+                        } else {
+                            content.style.display = "none";
+                        }
+                    });
+                });
+            </script>
+        </body>
+        </html>
+        

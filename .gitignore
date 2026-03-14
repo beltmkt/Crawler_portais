@@ -1,0 +1,22 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Python
+/.venv
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+crawler.log
+
+# misc
+.DS_Store
+*.pem
+*.env

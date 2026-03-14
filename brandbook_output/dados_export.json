@@ -1,0 +1,716 @@
+{
+  "domain": "www.gaveaimobi.com.br",
+  "extraction_date": "2026-03-11T18:28:14.828744",
+  "pages": {
+    "https://www.gaveaimobi.com.br/": {
+      "title": "Imóveis à Venda e para Alugar em Santos, São Vicente e Praia Grande | Gávea Imobiliária",
+      "importance": 178,
+      "logos": [
+        "https://cdn.imoview.com.br/gavea/Site/imagens/47yh9am9.png",
+        "https://cdn.imoview.com.br/gavea/Site/imagens/2vfz5w4n.png"
+      ],
+      "banners": [
+        "https://cdn.imoview.com.br/gavea/Site/imagens/b4razket.png",
+        "https://cdn.imoview.com.br/gavea/Site/imagens/bc7d4fsg.png",
+        "https://cdn.imoview.com.br/gavea/Site/imagens/1col0grp.png",
+        "https://cdn.imoview.com.br/gavea/Site/imagens/ce0kullm.png",
+        "https://cdn.imoview.com.br/gavea/Site/imagens/gd1gxtpr.png"
+      ],
+      "icons": [
+        "https://gaveaimobi.com.br/assets/icons/icon-phone-branco.svg",
+        "https://gaveaimobi.com.br/assets/icons/icon-favorito-ativo.svg",
+        "https://gaveaimobi.com.br/assets/icons/redes-sociais/icon-whatsapp-branco.svg",
+        "https://www.gaveaimobi.com.br/assets/icons/icon-favorito.svg"
+      ],
+      "images": [
+        "https://cdn.imoview.com.br/gavea/Imoveis/24627/4k71t-whatsapp-image-2024-12-13-at-225227-30-1734408982.jpeg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/25059/m2mqc-img-3179-2-1773087003.jpg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/25026/9bffh-img-2483-1772735810.jpg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/24627/0h1rif-img-9898-1755790487.jpg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/21382/QLqrdbkqGrMzmZke8RXBHUB0-20220609_112544.jpg",
+        "https://www.gaveaimobi.com.br/assets/icons/icons-tema-clean/icon-shower.svg",
+        "https://cdn.imoview.com.br/gavea/Site/imagens/418uh6m2.png",
+        "https://cdn.imoview.com.br/gavea/Imoveis/24506/bd15a-img-7147-1764545802.jpg",
+        "https://cdn.imoview.com.br/gavea/Site/imagens/4n4s0ryu.png",
+        "https://cdn.imoview.com.br/gavea/Imoveis/25027/yecum-img-2493-1772736037.jpg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/25026/66hb5g-img-2471-1772735810.jpg",
+        "https://www.gaveaimobi.com.br/assets/icons/icons-tema-clean/icon-garage.svg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/24781/c8lcu-911a20c9-bd9e-4329-8efc-3ba2113db6b1-1769174158.jpeg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/25024/dcn3z-img-2435-1772734991.jpg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/24832/fmkw6-whatsapp-image-2026-01-30-at-151847-1-1769798238.jpeg",
+        "https://cdn.imoview.com.br/gavea/Site/imagens/773idrcu.png",
+        "https://cdn.imoview.com.br/gavea/Imoveis/24451/cxbycf-whatsapp-image-2024-12-13-at-225227-34-1734406631.jpeg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/24009/cxbycf-whatsapp-image-2024-12-13-at-225227-34-1734406631.jpeg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/24452/98mngj-img-9883-1756177495.jpg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/25027/h1zll-img-2507-1772736037.jpg"
+      ],
+      "videos": [],
+      "youtube_videos": [],
+      "video_files": [],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Encontre o seu imóvel agora!",
+          "class": [
+            "titulo_principal",
+            "color_titulo",
+            "text-center"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Oportunidades",
+          "class": [
+            "titulo_section",
+            "color_titulo",
+            "barra_bottom_center",
+            "text-center",
+            "margin-top-20",
+            "margin-bottom-10"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Apartamento  à venda no Jardim Independência",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Sobrado  à venda no Japuí",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Apartamento  à venda no Itararé",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Apartamento  à venda no Centro",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Apartamento  à venda no Jardim Real",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Apartamento  à venda no Marapé",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Apartamento  à venda no Jardim Independência  no condomínio Garden Park Residence",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Apartamento  à venda no Jardim Independência  no condomínio Garden Park Residence",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Apartamento  à venda no Jardim Independência  no condomínio Garden Park Residence",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Apartamento  à venda no Jardim Independência  no condomínio Garden Park Residence",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Apartamento  à venda no Jardim Independência  no condomínio Garden Park Residence",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Apartamento  à venda no Jardim Independência  no condomínio Garden Park Residence",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Apartamento  à venda no Jardim Independência  no condomínio Garden Park Residence",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        }
+      ],
+      "paragraphs": [
+        "Imóveis à Venda e Aluguel em Santos, São Vicente, Praia Grande e Litoral Norte",
+        "Loja 1:Rua Jose Caballero 69, Gonzaga, Santos.Loja 2:Rua Messia Assú 151, Itararé, São Vicente.",
+        "Horário de atendimento:seg a sexta de 9h às 19h / sáb e dom de 9h às 18h",
+        "© 2026 | Gávea Imobiliária | CRECI: 034466-J | Desenvolvido porUniversal Software."
+      ],
+      "buttons": [
+        "✖",
+        "×",
+        "BUSCAR IMÓVEIS",
+        "1",
+        "Comprar",
+        "Alugar",
+        "Super Destaque",
+        "Aceito",
+        "ÁREA DO CLIENTE"
+      ],
+      "menu_items": [
+        {
+          "text": "COMPRAR",
+          "url": "https://gaveaimobi.com.br/venda/"
+        },
+        {
+          "text": "ALUGAR",
+          "url": "https://gaveaimobi.com.br/aluguel/"
+        },
+        {
+          "text": "CADASTRAR SEU IMÓVEL",
+          "url": "https://gaveaimobi.com.br/anuncie-seu-imovel"
+        },
+        {
+          "text": "CONTATO",
+          "url": "https://gaveaimobi.com.br/contato"
+        },
+        {
+          "text": "Imóveis à venda",
+          "url": "https://gaveaimobi.com.br/venda"
+        },
+        {
+          "text": "Imóveis para alugar",
+          "url": "https://gaveaimobi.com.br/aluguel"
+        },
+        {
+          "text": "Condomínios",
+          "url": "https://gaveaimobi.com.br/condominios"
+        },
+        {
+          "text": "Anunciar seu imóvel",
+          "url": "https://gaveaimobi.com.br/anuncie-seu-imovel"
+        },
+        {
+          "text": "Favoritos",
+          "url": "https://gaveaimobi.com.br/imoveis-favoritos"
+        },
+        {
+          "text": "Área do locatário",
+          "url": "https://cliente.portalunsoft.com.br/gavea"
+        }
+      ],
+      "footer_texts": [
+        "Imóveis à Venda e Aluguel em Santos, São Vicente, Praia Grande e Litoral NorteA Gávea ImobiliáriaQuem SomosFale ConoscoDocumentosPolítica de",
+        "PrivacidadeBlogNossa equipeOuvidoriaCRECI: 034996-JIMÓVEISImóveis para comprarImóveis para alugarCondomíniosAnunciar seu imóvelFavoritosClienteÁrea do",
+        "clienteATENDIMENTOcontato@gaveaimobi.com.brLoja 1:Rua Jose Caballero 69, Gonzaga, Santos.Loja 2:Rua Messia Assú 151, Itararé, São Vicente.(13) 3327-5649(13) 9 7418-2351Horário de atendimento:seg a sexta de 9h às 19h / sáb e dom de 9h às 18hredes sociais© 2026 | Gávea Imobiliária | CRECI: 034466-J | Desenvolvido porUniversal Software.",
+        "Quem Somos: https://gaveaimobi.com.br/sobre",
+        "Fale Conosco: https://gaveaimobi.com.br/contato"
+      ],
+      "colors": [
+        "#ff253a"
+      ],
+      "fonts": [],
+      "meta_description": "Descubra os melhores imóveis em Santos, São Vicente e Praia Grande com a Gávea Imobiliária. Atendimento exclusivo, imóveis selecionados e consultoria especializada para quem busca comprar ou investir no litoral.\n",
+      "has_form": false,
+      "has_contact_info": true
+    },
+    "https://www.gaveaimobi.com.br/venda/cobertura/": {
+      "title": "Quem Somos | Gávea Imobiliária em Santos, São Vicente e Praia Grande",
+      "importance": 47.019999999999996,
+      "logos": [
+        "https://cdn.imoview.com.br/gavea/Site/imagens/47yh9am9.png",
+        "https://cdn.imoview.com.br/gavea/Site/imagens/2vfz5w4n.png"
+      ],
+      "banners": [],
+      "icons": [
+        "https://gaveaimobi.com.br/assets/icons/icon-phone-branco.svg",
+        "https://gaveaimobi.com.br/assets/icons/icon-favorito-ativo.svg",
+        "https://gaveaimobi.com.br/assets/icons/redes-sociais/icon-whatsapp-branco.svg",
+        "https://www.gaveaimobi.com.br/assets/icons/icon-favorito.svg"
+      ],
+      "images": [
+        "https://cdn.imoview.com.br/gavea/Imoveis/10660/whatsapp-image-2022-10-26-at-124540-3.jpeg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/13473/gnqid-whatsapp-image-2023-05-10-at-110946-2-1683729656.jpeg",
+        "https://www.gaveaimobi.com.br/assets/icons/icons-tema-clean/icon-shower.svg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/6964/t92ool-whatsapp-image-2023-10-16-at-153600-1697482817.jpeg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/14132/tiaur-20230624-110830-1687739265.jpg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/6443/fbzu7-16-1713557065.jpeg",
+        "https://www.gaveaimobi.com.br/assets/icons/icons-tema-clean/icon-garage.svg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/12101/sr69b-73597fbe-5243-423e-afb8-31af1c5699ae-1710952071.jpg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/10071/zy0ba-sala-3-1708718163.jpg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/6443/dqd9c-13-1713557065.jpeg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/14132/x2rwb-20230624-110824-1687739265.jpg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/14443/s4sqb-2b3f3eda-4ab1-4a70-8d65-4897aaffe91a-1689362229.jpg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/10021/kainara10.jpg",
+        "https://gaveaimobi.com.br/assets/icons/lupa-arredondada.svg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/10660/whatsapp-image-2022-10-26-at-124539-3.jpeg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/12961/n2qnc-20230209-093109-1680826493.jpg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/14492/6hq3o-fc344d2f-5492-4ea0-a0b4-29cbc9559141-1689352149.jpg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/9677/img-20220816-131214.jpg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/14492/hwkjv-56080f43-f80e-4b4e-a0a3-3fd70b60e628-1689352149.jpg",
+        "https://cdn.imoview.com.br/gavea/Imoveis/14513/0d3kck-img-20230715-wa0030-1689443235.jpg"
+      ],
+      "videos": [],
+      "youtube_videos": [],
+      "video_files": [],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "85  Coberturas  à venda na Região de Santos",
+          "class": [
+            "texto-topo-busca"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Cobertura  à venda no José Menino",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Cobertura  à venda no Ponta da Praia",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Cobertura  à venda no Itararé",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Cobertura  à venda no Boqueirão  no condomínio Supremo Boqueirão",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Cobertura  à venda no José Menino",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Cobertura  à venda no Embaré",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Cobertura  à venda no Boqueirão",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Cobertura  à venda no Gonzaga",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Cobertura  à venda no Ponta da Praia",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Cobertura  à venda no Itararé",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Cobertura  à venda no Vila Belmiro",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Cobertura  à venda no Aparecida",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Cobertura  à venda no José Menino",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        },
+        {
+          "tag": "h2",
+          "text": "Cobertura  à venda no José Menino",
+          "class": [
+            "card-title",
+            "card_imovel_color"
+          ]
+        }
+      ],
+      "paragraphs": [
+        "Imóveis à Venda e Aluguel em Santos, São Vicente, Praia Grande e Litoral Norte",
+        "Loja 1:Rua Jose Caballero 69, Gonzaga, Santos.Loja 2:Rua Messia Assú 151, Itararé, São Vicente.",
+        "Horário de atendimento:seg a sexta de 9h às 19h / sáb e dom de 9h às 18h",
+        "© 2026 | Gávea Imobiliária | CRECI: 034466-J | Desenvolvido porUniversal Software."
+      ],
+      "buttons": [
+        "✖",
+        "×",
+        "1",
+        "2",
+        "3",
+        "4+",
+        "Buscar",
+        "Mais Filtros",
+        "Aceito",
+        "ÁREA DO CLIENTE"
+      ],
+      "menu_items": [
+        {
+          "text": "COMPRAR",
+          "url": "https://gaveaimobi.com.br/venda/"
+        },
+        {
+          "text": "ALUGAR",
+          "url": "https://gaveaimobi.com.br/aluguel/"
+        },
+        {
+          "text": "CADASTRAR SEU IMÓVEL",
+          "url": "https://gaveaimobi.com.br/anuncie-seu-imovel"
+        },
+        {
+          "text": "CONTATO",
+          "url": "https://gaveaimobi.com.br/contato"
+        },
+        {
+          "text": "Imóveis à venda",
+          "url": "https://gaveaimobi.com.br/venda"
+        },
+        {
+          "text": "Imóveis para alugar",
+          "url": "https://gaveaimobi.com.br/aluguel"
+        },
+        {
+          "text": "Condomínios",
+          "url": "https://gaveaimobi.com.br/condominios"
+        },
+        {
+          "text": "Anunciar seu imóvel",
+          "url": "https://gaveaimobi.com.br/anuncie-seu-imovel"
+        },
+        {
+          "text": "Favoritos",
+          "url": "https://gaveaimobi.com.br/imoveis-favoritos"
+        },
+        {
+          "text": "Área do locatário",
+          "url": "https://cliente.portalunsoft.com.br/gavea"
+        }
+      ],
+      "footer_texts": [
+        "Imóveis à Venda e Aluguel em Santos, São Vicente, Praia Grande e Litoral NorteA Gávea ImobiliáriaQuem SomosFale ConoscoDocumentosPolítica de",
+        "PrivacidadeBlogNossa equipeOuvidoriaCRECI: 034996-JIMÓVEISImóveis para comprarImóveis para alugarCondomíniosAnunciar seu imóvelFavoritosClienteÁrea do",
+        "clienteATENDIMENTOcontato@gaveaimobi.com.brLoja 1:Rua Jose Caballero 69, Gonzaga, Santos.Loja 2:Rua Messia Assú 151, Itararé, São Vicente.(13) 3327-5649(13) 9 7418-2351Horário de atendimento:seg a sexta de 9h às 19h / sáb e dom de 9h às 18hredes sociais© 2026 | Gávea Imobiliária | CRECI: 034466-J | Desenvolvido porUniversal Software.",
+        "Quem Somos: https://gaveaimobi.com.br/sobre",
+        "Fale Conosco: https://gaveaimobi.com.br/contato"
+      ],
+      "colors": [
+        "#ff253a"
+      ],
+      "fonts": [],
+      "meta_description": "A Gávea Imobiliária atua em Santos, São Vicente e Praia Grande, oferecendo compra, venda e locação de imóveis com atendimento exclusivo e consultoria especializada.\n",
+      "has_form": false,
+      "has_contact_info": true
+    },
+    "https://www.gaveaimobi.com.br/blog": {
+      "title": "Conheça o nosso Blog",
+      "importance": 47.004,
+      "logos": [
+        "https://cdn.imoview.com.br/gavea/Site/imagens/47yh9am9.png",
+        "https://cdn.imoview.com.br/gavea/Site/imagens/2vfz5w4n.png"
+      ],
+      "banners": [],
+      "icons": [
+        "https://gaveaimobi.com.br/assets/icons/icon-phone-branco.svg",
+        "https://gaveaimobi.com.br/assets/icons/icon-favorito-ativo.svg",
+        "https://gaveaimobi.com.br/assets/icons/redes-sociais/icon-whatsapp-branco.svg"
+      ],
+      "images": [
+        "https://www.gaveaimobi.com.br/assets/icons/icon-map-branco.svg",
+        "https://cdn.imoview.com.br/gavea/Site/imagens/i1626wgf.png",
+        "https://cdn.imoview.com.br/gavea/Site/imagens/xmxbc1p.png",
+        "https://gaveaimobi.com.br/assets/icons/icons-tema-clean/search.svg",
+        "https://cdn.imoview.com.br/gavea/Site/imagens/e3569o73.png",
+        "https://cdn.imoview.com.br/gavea/Site/imagens/h20tebqn.png"
+      ],
+      "videos": [],
+      "youtube_videos": [],
+      "video_files": [],
+      "headings": [],
+      "paragraphs": [
+        "Veja como se tornar corretor de imóveis em Santos, por que atuar no m...",
+        "Veja o guia completo para comprar imóvel no litoral. Entenda etapas, ...",
+        "O que faz os imóveis em Santos se valorizarem acima da média",
+        "Infraestrutura, localização e qualidade de vida em um dos bairros ma...",
+        "Imóveis à Venda e Aluguel em Santos, São Vicente, Praia Grande e Litoral Norte",
+        "Loja 1:Rua Jose Caballero 69, Gonzaga, Santos.Loja 2:Rua Messia Assú 151, Itararé, São Vicente.",
+        "Horário de atendimento:seg a sexta de 9h às 19h / sáb e dom de 9h às 18h",
+        "© 2026 | Gávea Imobiliária | CRECI: 034466-J | Desenvolvido porUniversal Software."
+      ],
+      "buttons": [
+        "✖",
+        "×",
+        "DESTAQUES",
+        "RECENTES",
+        "Aceito",
+        "ÁREA DO CLIENTE"
+      ],
+      "menu_items": [
+        {
+          "text": "COMPRAR",
+          "url": "https://gaveaimobi.com.br/venda/"
+        },
+        {
+          "text": "ALUGAR",
+          "url": "https://gaveaimobi.com.br/aluguel/"
+        },
+        {
+          "text": "CADASTRAR SEU IMÓVEL",
+          "url": "https://gaveaimobi.com.br/anuncie-seu-imovel"
+        },
+        {
+          "text": "CONTATO",
+          "url": "https://gaveaimobi.com.br/contato"
+        },
+        {
+          "text": "Home",
+          "url": "https://gaveaimobi.com.br/"
+        },
+        {
+          "text": "Blog",
+          "url": "https://gaveaimobi.com.br/blog"
+        },
+        {
+          "text": "Imóveis à venda",
+          "url": "https://gaveaimobi.com.br/venda"
+        },
+        {
+          "text": "Imóveis para alugar",
+          "url": "https://gaveaimobi.com.br/aluguel"
+        },
+        {
+          "text": "Condomínios",
+          "url": "https://gaveaimobi.com.br/condominios"
+        },
+        {
+          "text": "Anunciar seu imóvel",
+          "url": "https://gaveaimobi.com.br/anuncie-seu-imovel"
+        }
+      ],
+      "footer_texts": [
+        "Imóveis à Venda e Aluguel em Santos, São Vicente, Praia Grande e Litoral NorteA Gávea ImobiliáriaQuem SomosFale ConoscoDocumentosPolítica de",
+        "PrivacidadeBlogNossa equipeOuvidoriaCRECI: 034996-JIMÓVEISImóveis para comprarImóveis para alugarCondomíniosAnunciar seu imóvelFavoritosClienteÁrea do",
+        "clienteATENDIMENTOcontato@gaveaimobi.com.brLoja 1:Rua Jose Caballero 69, Gonzaga, Santos.Loja 2:Rua Messia Assú 151, Itararé, São Vicente.(13) 3327-5649(13) 9 7418-2351Horário de atendimento:seg a sexta de 9h às 19h / sáb e dom de 9h às 18hredes sociais© 2026 | Gávea Imobiliária | CRECI: 034466-J | Desenvolvido porUniversal Software.",
+        "Quem Somos: https://gaveaimobi.com.br/sobre",
+        "Fale Conosco: https://gaveaimobi.com.br/contato"
+      ],
+      "colors": [
+        "#ff253a"
+      ],
+      "fonts": [],
+      "meta_description": "Fique por dentro do mercado imobiliário com dicas, novidades e tendências em nosso blog. Conteúdo exclusivo para você.",
+      "has_form": true,
+      "has_contact_info": true
+    }
+  },
+  "global": {
+    "logos": [
+      "https://cdn.imoview.com.br/gavea/Site/imagens/47yh9am9.png",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/2vfz5w4n.png"
+    ],
+    "favicons": [
+      "https://cdn.imoview.com.br/gavea/Site/imagens/k1bt1abj.ico"
+    ],
+    "banners": [
+      "https://cdn.imoview.com.br/gavea/Site/imagens/b4razket.png",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/bc7d4fsg.png",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/1col0grp.png",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/ce0kullm.png",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/gd1gxtpr.png"
+    ],
+    "icons": [
+      "https://gaveaimobi.com.br/assets/icons/icon-phone-branco.svg",
+      "https://gaveaimobi.com.br/assets/icons/icon-favorito-ativo.svg",
+      "https://gaveaimobi.com.br/assets/icons/redes-sociais/icon-whatsapp-branco.svg",
+      "https://www.gaveaimobi.com.br/assets/icons/icon-favorito.svg"
+    ],
+    "images": [
+      "https://cdn.imoview.com.br/gavea/Imoveis/25059/m2mqc-img-3179-2-1773087003.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/6964/t92ool-whatsapp-image-2023-10-16-at-153600-1697482817.jpeg",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/4n4s0ryu.png",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/h20tebqn.png",
+      "https://www.gaveaimobi.com.br/assets/icons/icons-tema-clean/icon-garage.svg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24781/c8lcu-911a20c9-bd9e-4329-8efc-3ba2113db6b1-1769174158.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/25024/dcn3z-img-2435-1772734991.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/12101/sr69b-73597fbe-5243-423e-afb8-31af1c5699ae-1710952071.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/10071/zy0ba-sala-3-1708718163.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/6443/dqd9c-13-1713557065.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24452/98mngj-img-9883-1756177495.jpg",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/i1626wgf.png",
+      "https://cdn.imoview.com.br/gavea/Imoveis/12961/n2qnc-20230209-093109-1680826493.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24832/snz0s-whatsapp-image-2026-01-30-at-151845-2-1769798238.jpeg",
+      "https://www.gaveaimobi.com.br/assets/icons/icon-map-branco.svg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/14513/0d3kck-img-20230715-wa0030-1689443235.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/8886/vj1HjIrncuXdY5nr52XcKQkN-jaime-1.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/6964/5mojx-whatsapp-image-2023-10-16-at-153609-2-1697482814.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/12911/t8lv7-db671173-5820-4617-a025-9ed608689437-1680702343.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/25001/59nhi-whatsapp-image-2024-12-07-at-190004-2-1733885205.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/8402/vtiki-whatsapp-image-2025-02-06-at-142815-1-1738866978.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/14223/qkpig-whatsapp-image-2023-06-26-at-170229-1687811432.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/25002/59nhi-whatsapp-image-2024-12-07-at-190004-2-1733885205.jpeg",
+      "https://www.gaveaimobi.com.br/assets/icons/icons-tema-clean/icon-area.svg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/16291/jhrp1-whatsapp-image-2023-10-25-at-150307-2-1698257798.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/23766/0h1rif-img-9898-1755790487.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/8402/56o8tj-whatsapp-image-2025-02-06-at-142815-2-1738866978.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/12101/0t2ed-f7ed8132-f0c7-4eb0-b654-c14262191a7a-1710952071.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/22658/aywlm-20250506-171458-1746724408.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/2786/c1q85-img-3771-1719274307.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/12009/37.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/21382/VCZ7NLRXXcWHKuOq50tOzm9X-20220609_112507.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/13473/gnqid-whatsapp-image-2023-05-10-at-110946-2-1683729656.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24627/4k71t-whatsapp-image-2024-12-13-at-225227-30-1734408982.jpeg",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/xmxbc1p.png",
+      "https://cdn.imoview.com.br/gavea/Imoveis/6443/fbzu7-16-1713557065.jpeg",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/773idrcu.png",
+      "https://cdn.imoview.com.br/gavea/Imoveis/25027/h1zll-img-2507-1772736037.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/14492/6hq3o-fc344d2f-5492-4ea0-a0b4-29cbc9559141-1689352149.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/22658/dq6io-20250506-171430-1746724408.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/2786/g0g61-img-3717-1719274305.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/9677/img-20220816-130921.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/10021/kainara06.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/25025/qdhft-img-2469-1772735461.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24676/smghj-whatsapp-image-2024-12-13-at-225227-35-1734406631.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/12681/whatsapp-image-2023-03-23-at-163020-3.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/25024/gz9nt-img-2447-1772734991.jpg",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/bntv9sl0.png",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/bemi85lj.png",
+      "https://gaveaimobi.com.br/assets/images/loading-buffering.gif",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24009/smghj-whatsapp-image-2024-12-13-at-225227-35-1734406631.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24832/fmkw6-whatsapp-image-2026-01-30-at-151847-1-1769798238.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/25025/ypua2-img-2459-1772735461.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/14513/wxfhr-img-20230715-wa0023-1689443235.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/25026/9bffh-img-2483-1772735810.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/14132/tiaur-20230624-110830-1687739265.jpg",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/418uh6m2.png",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24506/bd15a-img-7147-1764545802.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/25027/yecum-img-2493-1772736037.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/14443/s4sqb-2b3f3eda-4ab1-4a70-8d65-4897aaffe91a-1689362229.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24009/cxbycf-whatsapp-image-2024-12-13-at-225227-34-1734406631.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24451/smghj-whatsapp-image-2024-12-13-at-225227-35-1734406631.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/25059/pvlyb-imv-sala1-1773087003.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/16291/r6hqu-whatsapp-image-2023-10-25-at-150305-1698257798.jpeg",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/nykcp89.png",
+      "https://cdn.imoview.com.br/gavea/Imoveis/13473/xb3e5-whatsapp-image-2023-05-10-at-110946-1683729656.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/21536/02nc1-20250307-150047-1741375947.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24781/jufwc-59b67602-8cba-43cb-b178-179114001c9d-1769174157.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/25001/qdgk3-whatsapp-image-2024-12-07-at-190005-2-1733885205.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/25002/qdgk3-whatsapp-image-2024-12-07-at-190005-2-1733885205.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/12961/83zfi-20250528-162517-1748622537.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/12009/38.jpg",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/j26xq1mr.png",
+      "https://gaveaimobi.com.br/assets/images/mapa/close.svg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/12911/rdv5o-c91788df-272a-4ba9-889d-2786620835d6-1680702342.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/10660/whatsapp-image-2022-10-26-at-124540-3.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24627/0h1rif-img-9898-1755790487.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/21382/QLqrdbkqGrMzmZke8RXBHUB0-20220609_112544.jpg",
+      "https://www.gaveaimobi.com.br/assets/icons/icons-tema-clean/icon-shower.svg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/25026/66hb5g-img-2471-1772735810.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/14132/x2rwb-20230624-110824-1687739265.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24451/cxbycf-whatsapp-image-2024-12-13-at-225227-34-1734406631.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/10021/kainara10.jpg",
+      "https://gaveaimobi.com.br/assets/icons/lupa-arredondada.svg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/10660/whatsapp-image-2022-10-26-at-124539-3.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/9677/img-20220816-131214.jpg",
+      "https://cdn.imoview.com.br/gavea/Site/imagens/e3569o73.png",
+      "https://cdn.imoview.com.br/gavea/Imoveis/14492/hwkjv-56080f43-f80e-4b4e-a0a3-3fd70b60e628-1689352149.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24452/x5rla-img-9898-1756177495.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/12681/whatsapp-image-2023-03-23-at-163020.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/8886/IxSgpjKvvT0bTNQSOzJVYBeP-jaime32.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24506/wsljh-img-7161-1764545801.jpg",
+      "https://www.gaveaimobi.com.br/assets/icons/icons-tema-clean/icon-bed.svg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/21536/qt577l-20250307-150611-1741375947.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/10071/4ot6s-sala-2-1708718163.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/24676/cxbycf-whatsapp-image-2024-12-13-at-225227-34-1734406631.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/14443/zvos3-b6c7d32d-ba88-4309-90ff-7f090f9f462c-1689362228.jpg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/14223/ie3ps-whatsapp-image-2023-06-26-at-151406-1687811433.jpeg",
+      "https://cdn.imoview.com.br/gavea/Imoveis/23766/4k71t-whatsapp-image-2024-12-13-at-225227-30-1734408982.jpeg",
+      "https://gaveaimobi.com.br/assets/icons/icons-tema-clean/search.svg"
+    ],
+    "videos": [],
+    "colors": [
+      "#ff253a"
+    ],
+    "fonts": []
+  }
+}
