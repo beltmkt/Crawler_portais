@@ -1,18 +1,12 @@
-{
-  "name": "chaves-exporter-backend",
+﻿{
+  "name": "crawler-portais",
   "version": "1.0.0",
-  "description": "Backend para extensão Chaves Export",
-  "main": "index.js",
   "scripts": {
     "dev": "vercel dev",
-    "deploy": "vercel deploy --prod"
+    "build": "echo 'No build needed'",
+    "postinstall": "npx playwright install chromium"
   },
   "dependencies": {
-    "@vercel/kv": "^1.0.1",
-    "axios": "^1.13.6",
-    "playwright": "^1.58.2"
-  },
-  "devDependencies": {
-    "vercel": "^32.0.0"
+    "playwright": "^1.40.0"
   }
 }
