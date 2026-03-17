@@ -12,7 +12,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 from datetime import datetime
@@ -24,7 +23,7 @@ app = Flask(__name__)
 CORS(app)  # Permite requisições de qualquer origem
 
 # ==============================================
-# CLASSE SCRAPER (SEU CÓDIGO ORIGINAL ADAPTADO)
+# CLASSE SCRAPER (VERSÃO CORRIGIDA)
 # ==============================================
 class ChavesScraper:
     def __init__(self, email, senha):
@@ -35,51 +34,56 @@ class ChavesScraper:
         self.xml_output = "imoveis_vivareal.xml"
         
     def setup_driver(self):
-    """Configura o ChromeDriver usando o executável já instalado no Docker"""
-    print("🔧 Configurando ChromeDriver...")
-    
-    options = Options()
-    options.add_argument("--headless=new")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--disable-gpu")
-    options.add_argument("--window-size=1920,1080")
-    options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    options.add_experimental_option('useAutomationExtension', False)
-    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36")
-    
-    # Caminho do Chrome (já instalado no Docker)
-    chrome_binary = "/usr/bin/google-chrome"
-    if os.path.exists(chrome_binary):
-        options.binary_location = chrome_binary
-        print(f"✅ Chrome encontrado em: {chrome_binary}")
-    
-    # Caminho FIXO do ChromeDriver (instalado no Docker)
-    chromedriver_path = "/usr/local/bin/chromedriver"
-    
-    if not os.path.exists(chromedriver_path):
-        # Fallback: procurar em outros locais
-        possible_paths = [
-            "/usr/local/bin/chromedriver",
-            "/usr/bin/chromedriver",
-            "/usr/bin/chromium-driver"
-        ]
-        for path in possible_paths:
-            if os.path.exists(path):
-                chromedriver_path = path
-                break
-    
-    print(f"✅ Usando ChromeDriver em: {chromedriver_path}")
-    service = Service(chromedriver_path)
-    
-    try:
-        self.driver = webdriver.Chrome(service=service, options=options)
-        self.wait = WebDriverWait(self.driver, 15)
-        print("✅ ChromeDriver configurado com sucesso!")
-    except Exception as e:
-        print(f"❌ Erro ao iniciar ChromeDriver: {e}")
-        raise
+        """Configura o ChromeDriver usando o executável já instalado no Docker"""
+        print("🔧 Configurando ChromeDriver...")
+        
+        options = Options()
+        options.add_argument("--headless=new")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--disable-gpu")
+        options.add_argument("--window-size=1920,1080")
+        options.add_argument("--disable-blink-features=AutomationControlled")
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        options.add_experimental_option('useAutomationExtension', False)
+        options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36")
+        
+        # Caminho do Chrome (já instalado no Docker)
+        chrome_binary = "/usr/bin/google-chrome"
+        if os.path.exists(chrome_binary):
+            options.binary_location = chrome_binary
+            print(f"✅ Chrome encontrado em: {chrome_binary}")
+        else:
+            print("⚠️ Chrome não encontrado no caminho padrão")
+        
+        # Caminho FIXO do ChromeDriver (instalado no Docker)
+        chromedriver_path = "/usr/local/bin/chromedriver"
+        
+        if not os.path.exists(chromedriver_path):
+            # Fallback: procurar em outros locais
+            possible_paths = [
+                "/usr/local/bin/chromedriver",
+                "/usr/bin/chromedriver",
+                "/usr/bin/chromium-driver"
+            ]
+            for path in possible_paths:
+                if os.path.exists(path):
+                    chromedriver_path = path
+                    break
+        
+        if not os.path.exists(chromedriver_path):
+            raise Exception("❌ ChromeDriver não encontrado em nenhum caminho")
+        
+        print(f"✅ Usando ChromeDriver em: {chromedriver_path}")
+        service = Service(chromedriver_path)
+        
+        try:
+            self.driver = webdriver.Chrome(service=service, options=options)
+            self.wait = WebDriverWait(self.driver, 15)
+            print("✅ ChromeDriver configurado com sucesso!")
+        except Exception as e:
+            print(f"❌ Erro ao iniciar ChromeDriver: {e}")
+            raise
         
     def login(self):
         """Faz login no site com as credenciais recebidas"""
@@ -137,7 +141,7 @@ class ChavesScraper:
         base_url = match.group(1)
         print(f"   📸 Base URL: {base_url}")
         
-        for i in range(50):  # Limitado para evitar timeout
+        for i in range(50):
             numero = str(i).zfill(2)
             foto_url = f"{base_url}-{numero}.jpg"
             
@@ -155,7 +159,7 @@ class ChavesScraper:
                 continue
         
         print(f"   📸 Total de {len(fotos)} fotos encontradas via padrão")
-        return fotos[:20]  # Limitado a 20 fotos
+        return fotos[:20]
     
     def extrair_caracteristicas_extras(self, texto_pagina):
         """Extrai lista de características adicionais"""
@@ -402,7 +406,6 @@ class ChavesScraper:
             except:
                 continue
         
-        # Limitar para evitar timeout no Render
         max_anuncios = min(len(urls_anuncios), 5)
         print(f"📊 Total de {len(urls_anuncios)} URLs coletadas (processando {max_anuncios})")
         
@@ -561,7 +564,7 @@ class ChavesScraper:
             # ===== MEDIA =====
             if imovel.get('fotos') and len(imovel['fotos']) > 0:
                 media = ET.SubElement(listing, "Media")
-                for i, foto in enumerate(imovel['fotos'][:20]):  # Limitado a 20 fotos
+                for i, foto in enumerate(imovel['fotos'][:20]):
                     item = ET.SubElement(media, "Item", medium="image")
                     if i == 0:
                         item.set("primary", "true")
