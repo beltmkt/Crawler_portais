@@ -11,7 +11,7 @@ RUN wget -q -O /tmp/chrome.deb https://dl.google.com/linux/direct/google-chrome-
     rm -rf /var/lib/apt/lists/* && \
     echo "✅ Chrome instalado: $(google-chrome --version)"
 
-# Instala ChromeDriver (VERSÃO FIXA - compatível com Chrome 146)
+# Instala ChromeDriver (versão fixa para Chrome 146)
 RUN wget -q -O /tmp/chromedriver.zip "https://storage.googleapis.com/chrome-for-testing-public/146.0.7680.80/linux64/chromedriver-linux64.zip" && \
     unzip /tmp/chromedriver.zip -d /usr/local/bin/ && \
     mv /usr/local/bin/chromedriver-linux64/chromedriver /usr/local/bin/ && \
@@ -31,5 +31,5 @@ COPY . .
 # Expõe a porta
 EXPOSE 10000
 
-# Comando para iniciar a aplicação
-CMD gunicorn crawler-portais:app --bind 0.0.0.0:$PORT
+# Comando para iniciar a aplicação (CORRIGIDO)
+CMD gunicorn Crawler_portais:app --bind 0.0.0.0:$PORT
