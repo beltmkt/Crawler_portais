@@ -31,5 +31,5 @@ COPY . .
 # Expõe a porta
 EXPOSE 10000
 
-# Comando para iniciar a aplicação (CORRIGIDO)
-CMD gunicorn Crawler_portais:app --bind 0.0.0.0:$PORT
+# Comando para iniciar a aplicação (CORRIGIDO - usando o arquivo correto)
+CMD gunicorn crawler_chavesnamao:app --bind 0.0.0.0:$PORT
