@@ -23,7 +23,7 @@ app = Flask(__name__)
 CORS(app)  # Permite requisições de qualquer origem
 
 # ==============================================
-# CLASSE SCRAPER (VERSÃO CORRIGIDA)
+# CLASSE SCRAPER (VERSÃO OTIMIZADA PARA MEMÓRIA)
 # ==============================================
 class ChavesScraper:
     def __init__(self, email, senha):
@@ -34,18 +34,33 @@ class ChavesScraper:
         self.xml_output = "imoveis_vivareal.xml"
         
     def setup_driver(self):
-        """Configura o ChromeDriver usando o executável já instalado no Docker"""
-        print("🔧 Configurando ChromeDriver...")
+        """Configura o ChromeDriver com otimizações de memória para o Render"""
+        print("🔧 Configurando ChromeDriver (modo econômico)...")
         
         options = Options()
+        
+        # Configurações headless básicas
         options.add_argument("--headless=new")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
         options.add_argument("--disable-gpu")
-        options.add_argument("--window-size=1920,1080")
+        
+        # Otimizações de memória (CRÍTICAS para o Render)
+        options.add_argument("--window-size=1280,720")  # Resolução menor
+        options.add_argument("--disable-extensions")
+        options.add_argument("--disable-plugins")
+        options.add_argument("--disk-cache-size=1")
+        options.add_argument("--media-cache-size=1")
+        options.add_argument("--max_old_space_size=256")  # Limita memória a 256MB
+        options.add_argument("--single-process")  # Tenta usar um único processo
         options.add_argument("--disable-blink-features=AutomationControlled")
         options.add_experimental_option("excludeSwitches", ["enable-automation"])
         options.add_experimental_option('useAutomationExtension', False)
+        options.add_argument("--disable-logging")
+        options.add_argument("--log-level=3")  # Reduz logs
+        options.add_argument("--silent")
+        
+        # User agent
         options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36")
         
         # Caminho do Chrome (já instalado no Docker)
@@ -79,8 +94,8 @@ class ChavesScraper:
         
         try:
             self.driver = webdriver.Chrome(service=service, options=options)
-            self.wait = WebDriverWait(self.driver, 15)
-            print("✅ ChromeDriver configurado com sucesso!")
+            self.wait = WebDriverWait(self.driver, 10)  # Timeout reduzido
+            print("✅ ChromeDriver configurado com sucesso (modo econômico)!")
         except Exception as e:
             print(f"❌ Erro ao iniciar ChromeDriver: {e}")
             raise
@@ -89,107 +104,112 @@ class ChavesScraper:
         """Faz login no site com as credenciais recebidas"""
         print("🔐 Fazendo login...")
         self.driver.get("https://www.chavesnamao.com.br/entrar/")
-        time.sleep(3)
+        time.sleep(2)
         
         try:
             botao_email = self.wait.until(EC.element_to_be_clickable(
                 (By.CSS_SELECTOR, "span.spacing-1x > button")
             ))
             botao_email.click()
-            time.sleep(2)
+            time.sleep(1)
         except:
             pass
         
-        campo_email = self.wait.until(EC.presence_of_element_located(
-            (By.CSS_SELECTOR, "#userLogin-input")
-        ))
-        campo_email.send_keys(self.email)
-        time.sleep(1)
+        try:
+            campo_email = self.wait.until(EC.presence_of_element_located(
+                (By.CSS_SELECTOR, "#userLogin-input")
+            ))
+            campo_email.send_keys(self.email)
+            time.sleep(0.5)
+        except:
+            print("⚠️ Campo de email não encontrado")
+            return False
         
-        campo_senha = self.driver.find_element(By.CSS_SELECTOR, "input[type='password']")
-        campo_senha.send_keys(self.senha)
-        time.sleep(1)
+        try:
+            campo_senha = self.driver.find_element(By.CSS_SELECTOR, "input[type='password']")
+            campo_senha.send_keys(self.senha)
+            time.sleep(0.5)
+        except:
+            print("⚠️ Campo de senha não encontrado")
+            return False
         
         try:
             botao_entrar = self.driver.find_element(By.CSS_SELECTOR, "button[type='submit']")
             botao_entrar.click()
         except:
-            botao_email.click()
+            try:
+                botao_email.click()
+            except:
+                pass
         
-        time.sleep(5)
+        time.sleep(3)
         print("✅ Login realizado!")
+        return True
         
     def ir_para_meus_anuncios(self):
         """Acessa a página de meus anúncios"""
         print("📋 Acessando Meus Anúncios...")
         self.driver.get("https://www.chavesnamao.com.br/minhaconta/meusanuncios/")
-        time.sleep(5)
+        time.sleep(3)
         
     def extrair_fotos_por_padrao(self, url_primeira_foto):
-        """Extrai TODAS as fotos do anúncio usando o padrão sequencial"""
+        """Extrai fotos do anúncio (limitado para economizar memória)"""
         fotos = []
         
-        url_primeira_foto = url_primeira_foto.replace('/0262x0197/', '/1200x0800/')
-        url_primeira_foto = url_primeira_foto.replace('/0850x0450/', '/1200x0800/')
+        if not url_primeira_foto:
+            return fotos
+        
+        url_primeira_foto = url_primeira_foto.replace('/0262x0197/', '/800x600/')  # Resolução menor
+        url_primeira_foto = url_primeira_foto.replace('/0850x0450/', '/800x600/')
         url_primeira_foto = url_primeira_foto.split('?')[0]
         
         match = re.search(r'(.+)-(\d{2})\.jpg', url_primeira_foto)
         if not match:
             fotos.append(url_primeira_foto)
-            return fotos
+            return fotos[:5]  # Máximo 5 fotos
         
         base_url = match.group(1)
         print(f"   📸 Base URL: {base_url}")
         
-        for i in range(50):
+        for i in range(10):  # Máximo 10 tentativas
             numero = str(i).zfill(2)
             foto_url = f"{base_url}-{numero}.jpg"
             
             try:
-                response = self.session.head(foto_url, timeout=3)
+                response = self.session.head(foto_url, timeout=2)
                 if response.status_code == 200:
                     fotos.append(foto_url)
                     print(f"      ✅ Foto {i:02d} encontrada")
                 else:
-                    if i > 5 and len(fotos) == i:
+                    if i > 3 and len(fotos) == i:
                         break
             except:
-                if i > 5 and len(fotos) == i:
+                if i > 3 and len(fotos) == i:
                     break
                 continue
         
-        print(f"   📸 Total de {len(fotos)} fotos encontradas via padrão")
-        return fotos[:20]
+        print(f"   📸 Total de {len(fotos)} fotos encontradas")
+        return fotos[:5]  # Máximo 5 fotos
     
     def extrair_caracteristicas_extras(self, texto_pagina):
-        """Extrai lista de características adicionais"""
+        """Extrai características principais (limitado)"""
         caracteristicas = []
         
-        linhas = texto_pagina.split('\n')
         keywords = [
-            'recepção', 'portaria', 'refeitório', 'terraço', 'jardim', 
-            'sala de reunião', 'estacionamento', 'elevador', 'copa',
-            'ar condicionado', 'fechadura biométrica', 'câmeras', 'segurança',
-            'cozinha', 'hall', 'acabamento', 'isolamento acústico', 'janelas',
-            'banheiro PNE', 'acessibilidade', 'elevador serviço', 'coworking',
             'piscina', 'churrasqueira', 'academia', 'salão de festas',
-            'playground', 'quadra', 'sauna', 'gerador', 'cisterna'
+            'portaria', 'elevador', 'ar condicionado', 'câmeras',
+            'segurança', 'estacionamento', 'copa', 'cozinha',
+            'playground', 'quadra', 'sauna', 'gerador'
         ]
         
-        for linha in linhas:
-            linha = linha.strip()
-            if len(linha) < 5 or len(linha) > 100:
-                continue
-            
-            for keyword in keywords:
-                if keyword.lower() in linha.lower():
-                    caracteristicas.append(linha)
-                    break
+        for keyword in keywords:
+            if keyword.lower() in texto_pagina.lower():
+                caracteristicas.append(keyword)
         
-        return list(set(caracteristicas))[:20]
+        return caracteristicas[:10]
     
-    def extrair_dados_completos(self, id_anuncio):
-        """Extrai dados COMPLETOS e REAIS do anúncio"""
+    def extrair_dados_basicos(self, id_anuncio):
+        """Extrai dados básicos do anúncio (versão leve)"""
         print(f"\n📂 Processando anúncio ID: {id_anuncio}")
         
         dados = {
@@ -197,419 +217,214 @@ class ChavesScraper:
             'titulo': '',
             'descricao': '',
             'tipo': 'Apartamento',
-            'subtipo': '',
             'preco_venda': '',
-            'preco_locacao': '',
             'cidade': 'Curitiba',
             'bairro': '',
-            'logradouro': '',
-            'numero': '',
-            'complemento': '',
-            'cep': '',
             'quartos': 0,
-            'suites': 0,
             'banheiros': 0,
             'vagas': 0,
             'area_util': 0,
-            'area_total': 0,
-            'area_terreno': 0,
-            'condominio': '',
-            'iptu': '',
-            'andar': '',
-            'salas': 0,
-            'mobiliado': False,
             'caracteristicas_extras': [],
             'fotos': []
         }
         
         try:
             self.wait.until(EC.presence_of_element_located((By.TAG_NAME, "h1")))
-            time.sleep(2)
+            time.sleep(1)
             
             texto_pagina = self.driver.find_element(By.TAG_NAME, 'body').text
-            print(f"   📄 Analisando página... ({len(texto_pagina)} caracteres)")
             
-            # ===== TÍTULO =====
+            # Título
             try:
                 titulo_elem = self.driver.find_element(By.CSS_SELECTOR, 'h1')
                 dados['titulo'] = titulo_elem.text.strip()
-                print(f"   ✅ Título: {dados['titulo'][:80]}...")
-            except:
-                titulo_pagina = self.driver.title
-                if titulo_pagina:
-                    dados['titulo'] = titulo_pagina.replace(' | Chaves na Mão', '').strip()
-            
-            # ===== CÓDIGO/REFERÊNCIA =====
-            ref_match = re.search(r'Ref[.:]\s*([A-Z0-9-]+)', texto_pagina, re.I)
-            if ref_match:
-                dados['codigo'] = ref_match.group(1)
-                print(f"   Código: {dados['codigo']}")
-            
-            # ===== PREÇO =====
-            preco_patterns = [
-                r'Venda[:\s]*R?\$?\s*([\d.,]+(?:[.,]\d{3})*(?:[.,]\d{2})?)',
-                r'R?\$\s*([\d.,]+(?:[.,]\d{3})*(?:[.,]\d{2})?)'
-            ]
-            
-            for pattern in preco_patterns:
-                match = re.search(pattern, texto_pagina, re.I)
-                if match:
-                    valor = match.group(1).replace('.', '').replace(',', '.')
-                    if re.match(r'^\d+\.?\d*$', valor):
-                        dados['preco_venda'] = valor
-                        print(f"   Preço venda: R$ {dados['preco_venda']}")
-                        break
-            
-            # ===== ENDEREÇO =====
-            try:
-                endereco_elem = self.driver.find_element(By.CSS_SELECTOR, '.endereco-texto, [class*="endereco"]')
-                endereco_texto = endereco_elem.text
-                
-                partes = endereco_texto.split('-')
-                if len(partes) >= 2:
-                    rua_parts = partes[0].strip().split(',')
-                    dados['logradouro'] = rua_parts[0].strip()
-                    if len(rua_parts) > 1:
-                        dados['numero'] = rua_parts[1].strip()
-                    
-                    cep_match = re.search(r'\d{5}-?\d{3}', texto_pagina)
-                    if cep_match:
-                        dados['cep'] = cep_match.group().replace('-', '')
+                print(f"   ✅ Título: {dados['titulo'][:50]}...")
             except:
                 pass
             
-            # ===== BAIRRO =====
-            bairros_conhecidos = [
-                'Batel', 'Capão Raso', 'Juvevê', 'Uberaba', 'Água Verde', 
-                'Campo Comprido', 'Hugo Lange', 'Ecoville', 'Cabral', 'Centro',
-                'Bigorrilho', 'Mercês', 'Boa Vista', 'Cristo Rei', 'Alto da Glória',
-                'Portão', 'Rebouças', 'Centro Cívico', 'Jardim Social'
-            ]
+            # Preço
+            preco_match = re.search(r'R?\$\s*([\d.,]+)', texto_pagina)
+            if preco_match:
+                dados['preco_venda'] = preco_match.group(1)
             
-            for bairro in bairros_conhecidos:
-                if bairro in texto_pagina or bairro in dados['titulo']:
+            # Bairro
+            bairros = ['Batel', 'Água Verde', 'Centro', 'Bigorrilho', 'Juvevê', 'Cabral']
+            for bairro in bairros:
+                if bairro in texto_pagina:
                     dados['bairro'] = bairro
                     break
             
-            # ===== CARACTERÍSTICAS =====
+            # Quartos
             q_match = re.search(r'(\d+)\s*quartos?', texto_pagina, re.I)
             if q_match:
                 dados['quartos'] = int(q_match.group(1))
-                print(f"   Quartos: {dados['quartos']}")
             
-            s_match = re.search(r'(\d+)\s*suítes?', texto_pagina, re.I)
-            if s_match:
-                dados['suites'] = int(s_match.group(1))
-                print(f"   Suítes: {dados['suites']}")
-            
+            # Banheiros
             b_match = re.search(r'(\d+)\s*banheiros?', texto_pagina, re.I)
             if b_match:
                 dados['banheiros'] = int(b_match.group(1))
-                print(f"   Banheiros: {dados['banheiros']}")
             
+            # Vagas
             v_match = re.search(r'(\d+)\s*vagas?', texto_pagina, re.I)
             if v_match:
                 dados['vagas'] = int(v_match.group(1))
-                print(f"   Vagas: {dados['vagas']}")
             
-            a_match = re.search(r'(\d+[.,]?\d*)\s*m[²2]', texto_pagina, re.I)
+            # Área
+            a_match = re.search(r'(\d+)\s*m[²2]', texto_pagina, re.I)
             if a_match:
-                dados['area_util'] = float(a_match.group(1).replace(',', '.'))
-                print(f"   Área: {dados['area_util']}m²")
+                dados['area_util'] = int(a_match.group(1))
             
-            c_match = re.search(r'Condom[íi]nio[:\s]*R?\$?\s*([\d.,]+)', texto_pagina, re.I)
-            if c_match:
-                dados['condominio'] = c_match.group(1).replace('.', '').replace(',', '.')
-                print(f"   Condomínio: R$ {dados['condominio']}")
-            
-            i_match = re.search(r'IPTU[:\s]*R?\$?\s*([\d.,]+)', texto_pagina, re.I)
-            if i_match:
-                dados['iptu'] = i_match.group(1).replace('.', '').replace(',', '.')
-                print(f"   IPTU: R$ {dados['iptu']}")
-            
-            andar_match = re.search(r'(\d+)[º°]?\s*andar', texto_pagina, re.I)
-            if andar_match:
-                dados['andar'] = andar_match.group(1)
-            
-            # ===== TIPO =====
-            if 'Sala comercial' in texto_pagina:
-                dados['tipo'] = 'Comercial'
-                dados['subtipo'] = 'Sala Comercial'
-            elif 'Cobertura' in texto_pagina:
-                dados['tipo'] = 'Cobertura'
-                dados['subtipo'] = 'Cobertura'
-            elif 'Terreno' in texto_pagina:
-                dados['tipo'] = 'Terreno'
-                dados['subtipo'] = 'Terreno'
-            
-            # ===== CARACTERÍSTICAS EXTRAS =====
+            # Características
             dados['caracteristicas_extras'] = self.extrair_caracteristicas_extras(texto_pagina)
             
-            # ===== DESCRIÇÃO COMPLETA =====
-            descricao_partes = [dados['titulo']]
+            # Descrição simples
+            dados['descricao'] = dados['titulo']
+            if dados['caracteristicas_extras']:
+                dados['descricao'] += " - " + ", ".join(dados['caracteristicas_extras'])
             
-            if dados['codigo'] != id_anuncio:
-                descricao_partes.append(f"Referência: {dados['codigo']}")
-            
+            # Fotos (apenas primeira)
             try:
-                desc_elem = self.driver.find_element(By.CSS_SELECTOR, '.descritivo')
-                desc_principal = desc_elem.text.strip()
-                if desc_principal:
-                    descricao_partes.append(desc_principal)
+                primeira_foto = None
+                imagens = self.driver.find_elements(By.CSS_SELECTOR, 'img[src*="imoveis/"]')
+                for img in imagens[:3]:
+                    src = img.get_attribute('src')
+                    if src and id_anuncio in src and not src.endswith('.png'):
+                        primeira_foto = src
+                        break
+                
+                if primeira_foto:
+                    dados['fotos'] = self.extrair_fotos_por_padrao(primeira_foto)
             except:
                 pass
             
-            if dados['caracteristicas_extras']:
-                descricao_partes.append("\nCARACTERÍSTICAS DO IMÓVEL:")
-                descricao_partes.extend([f"• {item}" for item in dados['caracteristicas_extras']])
-            
-            dados['descricao'] = '\n'.join(descricao_partes)
-            
-            # ===== FOTOS =====
-            print("\n📸 Extraindo fotos...")
-            
-            primeira_foto = None
-            imagens = self.driver.find_elements(By.CSS_SELECTOR, 'img[src*="imoveis/"], img[src*="imn/"]')
-            
-            for img in imagens:
-                src = img.get_attribute('src')
-                if src and id_anuncio in src and not src.endswith('.png') and 'logo' not in src:
-                    primeira_foto = src
-                    break
-            
-            if primeira_foto:
-                dados['fotos'] = self.extrair_fotos_por_padrao(primeira_foto)
-                print(f"   📸 Total: {len(dados['fotos'])} fotos")
-            
         except Exception as e:
-            print(f"❌ Erro no anúncio {id_anuncio}: {e}")
+            print(f"⚠️ Erro leve no anúncio {id_anuncio}: {e}")
         
         return dados
     
-    def processar_todos_anuncios(self):
-        """Processa todos os anúncios da lista (limitado para evitar timeout)"""
+    def processar_anuncios_limitados(self):
+        """Processa apenas 1 anúncio para economizar memória"""
         print("\n🔍 Procurando anúncios...")
-        time.sleep(3)
+        time.sleep(2)
         
-        print("📋 Coletando URLs dos anúncios...")
+        print("📋 Coletando URLs...")
         urls_anuncios = []
-        links = self.driver.find_elements(By.CSS_SELECTOR, 'h2.anuncio-titulo a')
         
-        for link in links:
-            try:
-                url = link.get_attribute('href')
-                if url:
-                    urls_anuncios.append(url)
-                    id_match = re.search(r'/(\d+)/', url)
-                    if id_match:
-                        print(f"   URL encontrada: ID {id_match.group(1)}")
-            except:
-                continue
+        try:
+            links = self.driver.find_elements(By.CSS_SELECTOR, 'h2.anuncio-titulo a')
+            for link in links[:3]:  # Pega até 3 para escolher 1
+                try:
+                    url = link.get_attribute('href')
+                    if url and url not in urls_anuncios:
+                        urls_anuncios.append(url)
+                except:
+                    continue
+        except:
+            pass
         
-        max_anuncios = min(len(urls_anuncios), 5)
-        print(f"📊 Total de {len(urls_anuncios)} URLs coletadas (processando {max_anuncios})")
-        
-        for i, url in enumerate(urls_anuncios[:max_anuncios]):
-            print(f"\n{'='*60}")
-            print(f"⏳ Processando anúncio {i+1}/{max_anuncios}")
+        # Processa APENAS 1 anúncio (para não estourar memória)
+        if urls_anuncios:
+            url = urls_anuncios[0]
+            print(f"📊 Processando 1 anúncio (modo econômico)")
             
             try:
                 self.driver.get(url)
-                print(f"   ✅ Abriu URL")
-                time.sleep(5)
+                time.sleep(3)
                 
                 id_match = re.search(r'/(\d+)/', url)
-                id_anuncio = id_match.group(1) if id_match else str(i+1)
+                id_anuncio = id_match.group(1) if id_match else "1"
                 
-                dados = self.extrair_dados_completos(id_anuncio)
-                
+                dados = self.extrair_dados_basicos(id_anuncio)
                 self.imoveis.append(dados)
-                print(f"   ✅ Anúncio ADICIONADO! Total na lista: {len(self.imoveis)}")
-                
-                self.driver.get("https://www.chavesnamao.com.br/minhaconta/meusanuncios/")
-                print("   ↩️ Voltando para lista")
-                time.sleep(3)
+                print(f"   ✅ Anúncio processado!")
                 
             except Exception as e:
-                print(f"❌ Erro no anúncio {i+1}: {e}")
-                if 'id_anuncio' in locals():
-                    self.imoveis.append({
-                        'codigo': id_anuncio,
-                        'titulo': f'Imóvel ID {id_anuncio}',
-                        'descricao': 'Erro ao carregar dados completos',
-                        'fotos': []
-                    })
-                try:
-                    self.driver.get("https://www.chavesnamao.com.br/minhaconta/meusanuncios/")
-                except:
-                    pass
-                time.sleep(3)
+                print(f"❌ Erro: {e}")
+                self.imoveis.append({
+                    'codigo': id_anuncio if 'id_anuncio' in locals() else "1",
+                    'titulo': 'Imóvel (processamento limitado)',
+                    'descricao': 'Erro ao carregar dados completos',
+                    'fotos': []
+                })
+        else:
+            print("❌ Nenhum anúncio encontrado")
     
-    def gerar_xml(self):
-        """Gera XML Viva Real com dados COMPLETOS"""
-        print("\n📄 Gerando XML...")
+    def gerar_xml_simples(self):
+        """Gera XML simplificado (menos campos)"""
+        print("\n📄 Gerando XML simplificado...")
         
         if len(self.imoveis) == 0:
             print("❌ Nenhum anúncio para gerar XML!")
             return None
         
         now = datetime.now()
-        publish_date = now.strftime("%Y-%m-%dT%H:%M:%S")
-        list_date = now.strftime("%Y-%m-%d-%H:%M")
         
         root = ET.Element("ListingDataFeed")
         root.set("xmlns", "http://www.vivareal.com/schemas/1.0/VRSync")
-        root.set("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance")
         
         header = ET.SubElement(root, "Header")
-        ET.SubElement(header, "PublishDate").text = publish_date
-        ET.SubElement(header, "Provider").text = self.email.split('@')[0].upper() + " NEGÓCIOS IMOBILIÁRIOS"
+        ET.SubElement(header, "Provider").text = self.email.split('@')[0].upper()
         ET.SubElement(header, "Email").text = self.email
         
         listings = ET.SubElement(root, "Listings")
-        total_fotos = 0
         
-        for idx, imovel in enumerate(self.imoveis):
-            print(f"   📝 Adicionando anúncio {idx+1}")
-            
+        for imovel in self.imoveis:
             listing = ET.SubElement(listings, "Listing")
-            
             ET.SubElement(listing, "ListingID").text = str(imovel.get('codigo', ''))
-            ET.SubElement(listing, "ListDate").text = list_date
-            ET.SubElement(listing, "LastUpdateDate").text = list_date
+            ET.SubElement(listing, "Title").text = imovel.get('titulo', '')
             
             if imovel.get('preco_venda'):
-                ET.SubElement(listing, "TransactionType").text = "For Sale"
-            elif imovel.get('preco_locacao'):
-                ET.SubElement(listing, "TransactionType").text = "For Rent"
-            else:
-                ET.SubElement(listing, "TransactionType").text = "For Sale"
+                ET.SubElement(listing, "SalePrice", currency="BRL").text = imovel['preco_venda']
             
-            ET.SubElement(listing, "Title").text = imovel.get('titulo', f"Imóvel {imovel.get('codigo', '')}")
-            ET.SubElement(listing, "Featured").text = "false"
-            ET.SubElement(listing, "PublicationType").text = "STANDARD"
-            
-            # ===== LOCATION =====
+            # Location simplificado
             location = ET.SubElement(listing, "Location")
-            location.set("displayAddress", "Full")
-            
-            country = ET.SubElement(location, "Country")
-            country.set("abbreviation", "BR")
-            country.text = "Brasil"
-            
-            state = ET.SubElement(location, "State")
-            state.set("abbreviation", "PR")
-            state.text = "Paraná"
-            
-            city = ET.SubElement(location, "City")
-            city.text = imovel.get('cidade', 'Curitiba')
-            
-            ET.SubElement(location, "Zone")
-            
+            ET.SubElement(location, "City").text = imovel.get('cidade', 'Curitiba')
             if imovel.get('bairro'):
-                neighborhood = ET.SubElement(location, "Neighborhood")
-                neighborhood.text = imovel['bairro']
+                ET.SubElement(location, "Neighborhood").text = imovel['bairro']
             
-            if imovel.get('logradouro'):
-                ET.SubElement(location, "Address").text = imovel['logradouro']
-            
-            if imovel.get('numero'):
-                ET.SubElement(location, "StreetNumber").text = imovel['numero']
-            
-            ET.SubElement(location, "Complement")
-            
-            if imovel.get('cep'):
-                postal = ET.SubElement(location, "PostalCode")
-                postal.text = imovel['cep']
-            else:
-                ET.SubElement(location, "PostalCode")
-            
-            ET.SubElement(location, "Latitude")
-            ET.SubElement(location, "Longitude")
-            
-            # ===== DETAILS =====
+            # Details simplificado
             details = ET.SubElement(listing, "Details")
+            ET.SubElement(details, "Description").text = imovel.get('descricao', '')
             
-            description = ET.SubElement(details, "Description")
-            description.text = imovel.get('descricao', imovel.get('titulo', ''))
-            
-            if imovel.get('preco_venda'):
-                ET.SubElement(details, "SalePrice", currency="BRL").text = imovel['preco_venda']
-            
-            if imovel.get('preco_locacao'):
-                ET.SubElement(details, "RentalPrice", currency="BRL").text = imovel['preco_locacao']
-            
-            property_type = imovel.get('subtipo', imovel.get('tipo', 'Apartamento'))
-            ET.SubElement(details, "PropertyType").text = property_type
-            
-            if imovel.get('area_util') and imovel['area_util'] > 0:
+            if imovel.get('quartos'):
+                ET.SubElement(details, "Bedrooms").text = str(imovel['quartos'])
+            if imovel.get('banheiros'):
+                ET.SubElement(details, "Bathrooms").text = str(imovel['banheiros'])
+            if imovel.get('vagas'):
+                ET.SubElement(details, "ParkingSpaces").text = str(imovel['vagas'])
+            if imovel.get('area_util'):
                 ET.SubElement(details, "LivingArea", unit="square metres").text = str(imovel['area_util'])
             
-            ET.SubElement(details, "Bedrooms").text = str(imovel.get('quartos', 0))
-            ET.SubElement(details, "Bathrooms").text = str(imovel.get('banheiros', 0))
-            ET.SubElement(details, "Suites").text = str(imovel.get('suites', 0))
-            ET.SubElement(details, "ParkingSpaces").text = str(imovel.get('vagas', 0))
-            
-            if imovel.get('andar'):
-                ET.SubElement(details, "Floor").text = imovel['andar']
-            
-            if imovel.get('iptu') and imovel['iptu'] != '0':
-                ET.SubElement(details, "YearlyTax", currency="BRL").text = imovel['iptu']
-            
-            if imovel.get('condominio') and imovel['condominio'] != '0':
-                ET.SubElement(details, "MonthlyFee", currency="BRL").text = imovel['condominio']
-            
-            ET.SubElement(details, "Features").text = " "
-            
-            # ===== MEDIA =====
+            # Fotos (limitado)
             if imovel.get('fotos') and len(imovel['fotos']) > 0:
                 media = ET.SubElement(listing, "Media")
-                for i, foto in enumerate(imovel['fotos'][:20]):
+                for i, foto in enumerate(imovel['fotos'][:3]):  # Máximo 3 fotos
                     item = ET.SubElement(media, "Item", medium="image")
                     if i == 0:
                         item.set("primary", "true")
                     item.text = foto
-                total_fotos += len(imovel['fotos'])
             
-            # ===== CONTACT INFO =====
+            # Contact Info
             contact = ET.SubElement(listing, "ContactInfo")
-            
-            contact_email = ET.SubElement(contact, "Email")
-            contact_email.text = self.email
-            
-            contact_name = ET.SubElement(contact, "Name")
-            contact_name.text = self.email.split('@')[0].upper() + " NEGÓCIOS IMOBILIÁRIOS"
-            
-            contact_phone = ET.SubElement(contact, "Telephone")
-            contact_phone.text = "(41) 3092-1001"
-            
-            # ===== STATUS =====
-            status = ET.SubElement(listing, "Status")
-            ET.SubElement(status, "PropertyStatus").text = "Available"
-            
-            status_date = ET.SubElement(status, "StatusDate")
-            status_date.text = now.strftime('%d/%m/%Y')
+            ET.SubElement(contact, "Email").text = self.email
         
         xml_str = ET.tostring(root, encoding="unicode")
         xml_pretty = minidom.parseString(xml_str).toprettyxml(indent="  ")
         xml_pretty = '\n'.join([line for line in xml_pretty.split('\n') if line.strip()])
         
-        print(f"\n{'='*60}")
-        print(f"✅ XML gerado com SUCESSO!")
-        print(f"📊 Total de anúncios: {len(self.imoveis)}")
-        print(f"📸 Total de fotos: {total_fotos}")
-        print(f"{'='*60}")
-        
+        print(f"✅ XML gerado com sucesso (versão simplificada)!")
         return xml_pretty
     
     def run(self):
-        """Executa todo o processo e retorna o XML"""
+        """Executa o crawler em modo econômico"""
         try:
             self.setup_driver()
-            self.login()
+            if not self.login():
+                return {'success': False, 'error': 'Falha no login'}
+            
             self.ir_para_meus_anuncios()
-            self.processar_todos_anuncios()
-            xml_content = self.gerar_xml()
+            self.processar_anuncios_limitados()
+            xml_content = self.gerar_xml_simples()
             
             return {
                 'success': True,
@@ -641,9 +456,9 @@ class ChavesScraper:
 def home():
     return jsonify({
         'status': 'online',
-        'message': 'API do Crawler Chaves na Mão',
+        'message': 'API do Crawler Chaves na Mão (Modo Econômico)',
         'endpoints': {
-            '/scraper': 'POST - Executa o crawler (enviar JSON com email e senha)',
+            '/scraper': 'POST - Executa o crawler (limitado a 1 anúncio)',
             '/health': 'GET - Verifica status'
         }
     })
@@ -657,7 +472,7 @@ def health():
 
 @app.route('/scraper', methods=['POST'])
 def scraper():
-    """Endpoint principal para executar o crawler"""
+    """Endpoint principal para executar o crawler (modo econômico)"""
     try:
         data = request.json
         
@@ -674,7 +489,7 @@ def scraper():
             }), 400
         
         print(f"\n{'='*60}")
-        print(f"🚀 Iniciando crawler para: {email}")
+        print(f"🚀 Iniciando crawler (modo econômico) para: {email}")
         print(f"{'='*60}")
         
         scraper = ChavesScraper(email, senha)
@@ -685,7 +500,7 @@ def scraper():
                 'success': True,
                 'total_anuncios': resultado['total_anuncios'],
                 'xml': resultado['xml'],
-                'message': f'{resultado["total_anuncios"]} anúncios processados com sucesso'
+                'message': f'{resultado["total_anuncios"]} anúncio(s) processado(s) (modo econômico)'
             })
         else:
             return jsonify({
